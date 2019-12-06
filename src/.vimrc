@@ -14,14 +14,14 @@ set hidden
 
 " UI系の動作
 "
-" 入力中のコマンドを右下に表示する
-set showcmd
 " シンタックスハイライトを有効化
 syntax enable
 " 行番号を表示する
 set number
 " ステータスラインを常時表示
 set laststatus=2
+" 入力中のコマンドを右下に表示する
+set showcmd
 
 " よくわからないけどとりあえず書いとけ
 set virtualedit=onemore
