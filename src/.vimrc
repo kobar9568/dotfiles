@@ -7,6 +7,11 @@ set noswapfile
 " viminfoファイルを作成しない
 set viminfo=
 
+" 保存系の動作
+"
+" 改行で終わらないファイルを編集した際に、改行を付加しない
+set nofixeol
+
 " ファイルに変更が加わった際に自動で読み込む
 set autoread
 " よくわからないけどとりあえず書いとけ
@@ -22,11 +27,21 @@ set number
 set laststatus=2
 " 入力中のコマンドを右下に表示する
 set showcmd
+" ウインドウタイトルにファイル名を反映させる
+set title
 
 " よくわからないけどとりあえず書いとけ
 set virtualedit=onemore
 " 自動インデント:C言語風
 set smartindent
+" 自動インデントの幅?
+set shiftwidth=4
+" ハードタブの表示幅
+set tabstop=4
+" ソフトタブを使う
+set expandtab
+" ハードタブを可視化
+set list listchars=tab:\\t
 " ビープ音を可視化?
 set visualbell
 
@@ -43,9 +58,3 @@ set wildmode=list:longest
 " ラップされた仮想的な行に移動できるようにする
 nnoremap j gj
 nnoremap k gk
-
-set list listchars=tab:\\t
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set nofixeol
