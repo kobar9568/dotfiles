@@ -13,6 +13,7 @@ set autoread
 set hidden
 
 " UI系の動作
+"
 " 入力中のコマンドを右下に表示する
 set showcmd
 " シンタックスハイライトを有効化
