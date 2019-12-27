@@ -1,0 +1,42 @@
+{
+  "settingsVersion": "1.64.6",
+  "exclusionRules": [
+    {
+      "pattern": "https://remotedesktop.google.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://www.google.com/maps/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://typing.twi1.me/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://discordapp.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://docs.google.com/presentation/*",
+      "passKeys": ""
+    }
+  ],
+  "filterLinkHints": false,
+  "waitForEnterForFilteredHints": true,
+  "hideHud": false,
+  "keyMappings": "unmapAll\n\n# Navigating the page\nmap j scrollDown\nmap k scrollUp\nmap gg scrollToTop\nmap G scrollToBottom\nmap h scrollLeft\nmap l scrollRight\nmap yy copyCurrentUrl\nmap p openCopiedUrlInNewTab\nmap P openCopiedUrlInCurrentTab\nmap v enterVisualMode\nmap i LinkHints.activateModeToOpenInNewTab\nmap I LinkHints.activateMode\n\n# Using the vomnibar\nmap o Vomnibar.activateInNewTab\nmap O Vomnibar.activate\nmap b Vomnibar.activateBookmarksInNewTab\nmap B Vomnibar.activateBookmarks\n\n# Using find\nmap / enterFindMode\nmap n performFind\nmap N performBackwardsFind\n\n# Navigating history\nmap r goBack\nmap u goForward\n\n# Manipulating tabs\nmap t createTab\nmap d previousTab\nmap f nextTab\nmap x removeTab\n\n# Miscellaneous\nmap ? showHelp",
+  "linkHintCharacters": "sadfjklewcmpgh",
+  "linkHintNumbers": "0123456789",
+  "newTabUrl": "about:newtab",
+  "nextPatterns": "next,more,newer,>,›,→,»,≫,>>",
+  "previousPatterns": "prev,previous,back,older,<,‹,←,«,≪,<<",
+  "regexFindMode": false,
+  "ignoreKeyboardLayout": false,
+  "scrollStepSize": 60,
+  "smoothScroll": true,
+  "grabBackFocus": false,
+  "searchEngines": "",
+  "searchUrl": "https://www.google.com/search?q=",
+  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n/* linkhint boxes */\nbackground: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF785),\n  color-stop(100%,#FFC542));\nborder: 1px solid #E3BE23;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\ncolor: black;\nfont-weight: bold;\nfont-size: 12px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n}"
+}
