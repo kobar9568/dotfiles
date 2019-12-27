@@ -30,6 +30,8 @@ set showcmd
 " ウインドウタイトルにファイル名を反映させる
 set title
 
+" エディタ系の動作
+"
 " よくわからないけどとりあえず書いとけ
 set virtualedit=onemore
 " 自動インデント:C言語風
@@ -38,23 +40,24 @@ set smartindent
 set shiftwidth=4
 " ハードタブの表示幅
 set tabstop=4
+" ハードタブを可視化
+set list listchars=tab:->
 " ソフトタブを使う
 set expandtab
-" ハードタブを可視化
-set list listchars=tab:\\t
 " ビープ音を可視化?
 set visualbell
-
 " 閉じ括弧入力時に対応する括弧にカーソルを飛ばす
 set showmatch
 " showmatchで復帰する時間の設定 100ms単位
 set matchtime=1
-
-" よくわからないけどとりあえず書いとけ
-set wildmode=list:longest
 
 " キーのマッピング変更 nmapではなくnnoremapを使うべき
 "
 " ラップされた仮想的な行に移動できるようにする
 nnoremap j gj
 nnoremap k gk
+
+" よくわかんないの
+"
+" よくわからないけどとりあえず書いとけ
+set wildmode=list:longest
