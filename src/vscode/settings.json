@@ -1,0 +1,26 @@
+{
+    "editor.largeFileOptimizations": false,
+    "editor.renderWhitespace": "boundary",
+    "files.eol": "\n",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Monokai Dimmed",
+    "workbench.tips.enabled": false,
+    "window.closeWhenEmpty": true,
+    "explorer.confirmDragAndDrop": false,
+    "extensions.ignoreRecommendations": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "underline",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "git.ignoreMissingGitWarning": true,
+    "markdown.preview.fontFamily": "Meiryo",
+    "editor.fontFamily": "Consolas, 'Courier New', monospace, Meiryo",
+    "diffEditor.ignoreTrimWhitespace": true,
+    "diffEditor.renderSideBySide": true,
+    "markdownlint.config": {
+        "MD014": false,
+        "MD024": false,
+        "MD025": false,
+        "MD040": false
+    }
+}
