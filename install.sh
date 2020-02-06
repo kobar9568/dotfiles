@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # dotfiles
-readonly DOTFILES=(.vimrc .gitconfig)
+readonly DOTFILES=(.bashrc .vimrc .gitconfig)
 
 # link
 for file in ${DOTFILES[@]}
