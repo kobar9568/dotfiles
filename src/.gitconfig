@@ -3,3 +3,4 @@
     email = "38117745+kobar9568@users.noreply.github.com"
 [color]
     ui = auto
+    autoCRLF = false
