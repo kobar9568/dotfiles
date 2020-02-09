@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # dotfiles
-readonly DOTFILES=`find src/home/ -type f | sed 's/^.*home\///'`
+DOTFILES=`find src/home/ -type f | sed 's/^.*home\///'`
 
 # link
 for file in $DOTFILES
