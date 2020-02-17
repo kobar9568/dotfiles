@@ -12,3 +12,7 @@ done
 # SSH config
 mkdir $HOME/.ssh/
 ln -s $HOME/dotfiles/src/.ssh/config $HOME/.ssh/config
+
+# Termux config
+mkdir $HOME/.termux/
+ln -s $HOME/dotfiles/src/.termux/termux.properties $HOME/.termux/termux.properties
