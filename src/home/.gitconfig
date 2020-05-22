@@ -5,3 +5,4 @@
     ui = auto
 [core]
     autoCRLF = false
+    pager = "LESSCHARSET=utf-8 less"
