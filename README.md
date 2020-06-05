@@ -12,7 +12,7 @@
 管理者権限のPowerShellを上げて、以下を実行
 
 ```
-# Set-ExecutionPolicy Bypass
+# powershell -NoProfile -ExecutionPolicy ByPass -Command "Start-Process powershell.exe -ArgumentList \"-ExecutionPolicy ByPass\"-Verb runas"
 ```
 
 ### 2. 一般ユーザーにシンボリックリンクの作成権限を与える
