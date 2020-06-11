@@ -57,6 +57,17 @@ set matchtime=1
 nnoremap j gj
 nnoremap k gk
 
+" 甘えるな
+let sermon='甘えるな'
+nnoremap <Up>    :echo sermon<CR>
+nnoremap <Down>  :echo sermon<CR>
+nnoremap <Left>  :echo sermon<CR>
+nnoremap <Right> :echo sermon<CR>
+inoremap <Up>    <Esc>:echo sermon<CR>i
+inoremap <Down>  <Esc>:echo sermon<CR>i
+inoremap <Left>  <Esc>:echo sermon<CR>i
+inoremap <Right> <Esc>:echo sermon<CR>i
+
 " よくわかんないの
 "
 " よくわからないけどとりあえず書いとけ
