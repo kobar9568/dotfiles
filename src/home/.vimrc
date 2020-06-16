@@ -29,7 +29,7 @@ set laststatus=2
 set showcmd
 " ウインドウタイトルにファイル名を反映させる
 set title
-" コマンド表事行を2行にする
+" コマンド表示行を2行にする
 set cmdheight=2
 
 " エディタ系の動作
