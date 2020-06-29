@@ -13,6 +13,12 @@ done
 mkdir $HOME/.ssh/
 ln -s $HOME/dotfiles/src/.ssh/config $HOME/.ssh/config
 
+# VSCode config
+ln -s $HOME/dotfiles/src/vscode/settings.json $HOME/.config/Code/User/settings.json
+ln -s $HOME/dotfiles/src/vscode/keybindings.json $HOME/.config/Code/User/keybindings
+
 # Termux config
-mkdir $HOME/.termux/
-ln -s $HOME/dotfiles/src/.termux/termux.properties $HOME/.termux/termux.properties
+if [ `uname -o` = "Android" ]; then
+  mkdir $HOME/.termux/
+  ln -s $HOME/dotfiles/src/.termux/termux.properties $HOME/.termux/termux.properties
+fi

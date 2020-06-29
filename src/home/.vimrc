@@ -29,6 +29,8 @@ set laststatus=2
 set showcmd
 " ウインドウタイトルにファイル名を反映させる
 set title
+" コマンド表示行を2行にする
+set cmdheight=2
 
 " エディタ系の動作
 "
@@ -56,6 +58,17 @@ set matchtime=1
 " ラップされた仮想的な行に移動できるようにする
 nnoremap j gj
 nnoremap k gk
+
+" 甘えるな
+let sermon='甘えるな'
+nnoremap <Up>    :echo sermon<CR>
+nnoremap <Down>  :echo sermon<CR>
+nnoremap <Left>  :echo sermon<CR>
+nnoremap <Right> :echo sermon<CR>
+"inoremap <Up>    <Esc>:echo sermon<CR>i
+"inoremap <Down>  <Esc>:echo sermon<CR>i
+"inoremap <Left>  <Esc>:echo sermon<CR>i
+"inoremap <Right> <Esc>:echo sermon<CR>i
 
 " よくわかんないの
 "
