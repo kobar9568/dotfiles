@@ -1,5 +1,5 @@
 {
-  "settingsVersion": "1.64.6",
+  "settingsVersion": "1.66",
   "exclusionRules": [
     {
       "pattern": "https://remotedesktop.google.com/*",
@@ -14,23 +14,27 @@
       "passKeys": ""
     },
     {
-      "pattern": "https://discordapp.com/*",
+      "pattern": "https://docs.google.com/presentation/*",
       "passKeys": ""
     },
     {
-      "pattern": "https://docs.google.com/presentation/*",
+      "pattern": "https://dj3d.io/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://www.directorz.ad.jp/*",
       "passKeys": ""
     }
   ],
   "filterLinkHints": false,
   "waitForEnterForFilteredHints": true,
   "hideHud": false,
-  "keyMappings": "unmapAll\n\n# Navigating the page\nmap j scrollDown\nmap k scrollUp\nmap gg scrollToTop\nmap G scrollToBottom\nmap h scrollLeft\nmap l scrollRight\nmap yy copyCurrentUrl\nmap p openCopiedUrlInNewTab\nmap P openCopiedUrlInCurrentTab\nmap v enterVisualMode\nmap i LinkHints.activateModeToOpenInNewTab\nmap I LinkHints.activateMode\n\n# Using the vomnibar\nmap o Vomnibar.activateInNewTab\nmap O Vomnibar.activate\nmap b Vomnibar.activateBookmarksInNewTab\nmap B Vomnibar.activateBookmarks\n\n# Using find\nmap / enterFindMode\nmap n performFind\nmap N performBackwardsFind\n\n# Navigating history\nmap r goBack\nmap u goForward\n\n# Manipulating tabs\nmap t createTab\nmap d previousTab\nmap f nextTab\nmap x removeTab\n\n# Miscellaneous\nmap ? showHelp",
+  "keyMappings": "unmapAll\n\n# Navigating the page\nmap j scrollDown\nmap k scrollUp\nmap gg scrollToTop\nmap G scrollToBottom\nmap h scrollLeft\nmap l scrollRight\nmap s reload\nmap yy copyCurrentUrl\nmap p openCopiedUrlInNewTab\nmap P openCopiedUrlInCurrentTab\nmap v enterVisualMode\nmap i LinkHints.activateModeToOpenInNewTab\nmap I LinkHints.activateMode\nmap [[ goPrevious\nmap ]] goNext\n\n# Using the vomnibar\nmap o Vomnibar.activateInNewTab\nmap O Vomnibar.activate\nmap b Vomnibar.activateBookmarksInNewTab\nmap B Vomnibar.activateBookmarks\n\n# Using find\nmap / enterFindMode\nmap n performFind\nmap N performBackwardsFind\n\n# Navigating history\nmap r goBack\nmap u goForward\n\n# Manipulating tabs\nmap t createTab\nmap d previousTab\nmap f nextTab\nmap x removeTab\n\n# Miscellaneous\nmap ? showHelp",
   "linkHintCharacters": "sadfjklewcmpgh",
   "linkHintNumbers": "0123456789",
   "newTabUrl": "about:newtab",
-  "nextPatterns": "next,more,newer,>,›,→,»,≫,>>",
-  "previousPatterns": "prev,previous,back,older,<,‹,←,«,≪,<<",
+  "nextPatterns": "次へ",
+  "previousPatterns": "前へ",
   "regexFindMode": false,
   "ignoreKeyboardLayout": false,
   "scrollStepSize": 60,
@@ -38,5 +42,5 @@
   "grabBackFocus": false,
   "searchEngines": "",
   "searchUrl": "https://www.google.com/search?q=",
-  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n/* linkhint boxes */\nbackground: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF785),\n  color-stop(100%,#FFC542));\nborder: 1px solid #E3BE23;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\ncolor: black;\nfont-weight: bold;\nfont-size: 12px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n}"
+  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n    /* linkhint boxes */\n    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#565756),\n    color-stop(100%,#242524));\n    border: 1px solid #e4e5e4;\n    opacity: 1.0;\n    text-shadow: none !important;\n}\n\ndiv > .vimiumHintMarker span {\n    /* linkhint text */\n    color: #f1f2f1;\n    font-weight: normal;\n    font-size: 18px;\n    font-family: Avenir;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n    /* linkhint matching text */\n    color: #969696;\n}"
 }
