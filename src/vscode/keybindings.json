@@ -1,28 +1,29 @@
 // 既定値を上書きするには、このファイル内にキー バインドを挿入しますauto[]
 [
-    {
-        "key": "ctrl+n",
-        "command": "-workbench.action.files.newUntitledFile"
-    },
-    {
-        "key": "alt+1",
-        "command": "-workbench.action.openEditorAtIndex1"
-    },
+    // デフォルトキーバインド削除
     {
         "key": "ctrl+b",
         "command": "-workbench.action.toggleSidebarVisibility"
     },
     {
-        "key": "alt+1",
-        "command": "workbench.action.toggleSidebarVisibility"
+        "key": "ctrl+n",
+        "command": "-workbench.action.files.newUntitledFile"
     },
     {
         "key": "ctrl+oem_plus",
         "command": "-workbench.action.zoomIn"
     },
     {
+        "key": "ctrl+oem_minus",
+        "command": "-workbench.action.zoomOut"
+    },
+    {
         "key": "ctrl+shift+oem_plus",
         "command": "-workbench.action.zoomIn"
+    },
+    {
+        "key": "ctrl+shift+oem_minus",
+        "command": "-workbench.action.zoomOut"
     },
     {
         "key": "ctrl+numpad_add",
@@ -33,11 +34,16 @@
         "command": "-workbench.action.zoomOut"
     },
     {
-        "key": "ctrl+oem_minus",
-        "command": "-workbench.action.zoomOut"
+        "key": "alt+1",
+        "command": "-workbench.action.openEditorAtIndex1"
+    },
+    // キーバインド定義
+    {
+        "key": "alt+1",
+        "command": "workbench.action.toggleSidebarVisibility"
     },
     {
-        "key": "ctrl+shift+oem_minus",
-        "command": "-workbench.action.zoomOut"
+        "key": "f8",
+        "command": "workbench.action.webview.openDeveloperTools"
     }
 ]
