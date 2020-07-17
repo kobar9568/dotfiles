@@ -6,3 +6,5 @@
 [core]
     autoCRLF = false
     pager = "LESSCHARSET=utf-8 less"
+[pull]
+    rebase = false
