@@ -168,5 +168,77 @@ module.exports = {
   keymaps: {
     // Example
     // 'window:devtools': 'cmd+alt+o',
+
+    // Windowsで応答なしになるバグがある為解除
+    "window:reloadFull": "",
+
+    // 使い所がよくわからない
+    "window:hamburgerMenu": "",
+
+    // 多分使わない
+    "window:minimize": "",
+
+    // 使い所がよくわからない
+    "window:zoom": "",
+
+    // 複数キーマップ不要
+    "window:close": "alt+f4",
+
+    // 誤爆防止
+    "tab:new": "",
+
+    // 複数キーマップ不要
+    "tab:next": "ctrl+tab",
+
+    // 複数キーマップ不要
+    "tab:prev": "ctrl+shift+tab",
+
+    // 誤爆防止
+    "pane:splitVertical": "",
+
+    // 誤爆防止
+    "pane:splitHorizontal": "",
+
+    // シェルの方でコマンドで閉じるので不要
+    "pane:close": "",
+
+    // 多分使わない
+    "editor:undo": "",
+
+    // 多分使わない
+    "editor:redo": "",
+
+    // 多分使わない
+    "editor:cut": "",
+
+    // 多分使わない
+    "editor:selectAll": "",
+
+    // 多分使わない
+    "editor:movePreviousWord": "",
+
+    // 多分使わない
+    "editor:moveNextWord": "",
+
+    // 多分使わない
+    "editor:moveBeginningLine": "",
+
+    // 多分使わない
+    "editor:moveEndLine": "",
+
+    // 多分使わない
+    "editor:deletePreviousWord": "",
+
+    // 多分使わない
+    "editor:deleteNextWord": "",
+
+    // 多分使わない
+    "editor:deleteBeginningLine": "",
+
+    // 多分使わない
+    "editor:deleteEndLine": "",
+
+    // 多分使わない
+    "plugins:update": "",
   },
 };
