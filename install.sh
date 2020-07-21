@@ -10,7 +10,7 @@ do
 done
 
 # SSH config
-mkdir $HOME/.ssh/
+mkdir -p $HOME/.ssh/
 ln -s $HOME/dotfiles/src/.ssh/config $HOME/.ssh/config
 
 # VSCode config
@@ -19,7 +19,7 @@ ln -s $HOME/dotfiles/src/vscode/keybindings.json $HOME/.config/Code/User/keybind
 
 # Termux config
 if [ `uname -o` = "Android" ]; then
-  mkdir $HOME/.termux/
+  mkdir -p $HOME/.termux/
   ln -s $HOME/dotfiles/src/.termux/termux.properties $HOME/.termux/termux.properties
 fi
 
