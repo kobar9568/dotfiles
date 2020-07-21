@@ -5,6 +5,12 @@
 * Windowsでリポジトリをcloneする前に、gitの改行コード自動変換の設定を無効にしておく
 * cloneしたら、`~/.gitconfig`は削除しておく
 
+## Installation (Linux)
+
+```
+$ ./install.sh
+```
+
 ## Installation (Windows)
 
 ### 1. PowerShellスクリプトの実行を許可する
