@@ -22,3 +22,7 @@ if [ `uname -o` = "Android" ]; then
   mkdir $HOME/.termux/
   ln -s $HOME/dotfiles/src/.termux/termux.properties $HOME/.termux/termux.properties
 fi
+
+# bat config
+mkdir -p $HOME/.config/bat/
+ln -s $HOME/dotfiles/src/bat/config $HOME/.config/bat/config
