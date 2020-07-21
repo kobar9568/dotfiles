@@ -121,3 +121,14 @@ alias cp='cp -i'
 alias ..='cd ..'
 alias date='date --iso-8601="seconds"'
 alias less='less -MR'
+
+# Environment variables.
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
+
+# Golang versions
+go_version='1.14.5'
+
+alias go='$GOPATH/bin/go$go_version'
+alias gofmt='$HOME/sdk/go$go_version/bin/gofmt'
