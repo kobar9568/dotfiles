@@ -127,8 +127,8 @@ export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
-# Golang versions
-go_version='1.14.5'
+# Golang version control
+go_version='1.15'
 
-alias go='$GOPATH/bin/go$go_version'
+alias go='$GOBIN/go$go_version'
 alias gofmt='$HOME/sdk/go$go_version/bin/gofmt'
