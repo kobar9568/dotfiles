@@ -132,3 +132,6 @@ go_version='1.15'
 
 alias go='$GOBIN/go$go_version'
 alias gofmt='$HOME/sdk/go$go_version/bin/gofmt'
+
+# Exec fish.
+exec fish
