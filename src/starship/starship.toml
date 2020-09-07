@@ -1,0 +1,14 @@
+[character]
+symbol = "$"
+
+[git_branch]
+symbol = "🌲 "
+
+[hostname]
+ssh_only = false
+
+[python]
+python_binary = "python3"
+
+[username]
+show_always = true
