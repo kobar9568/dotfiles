@@ -112,7 +112,7 @@ if ! shopt -oq posix; then
 fi
 
 # aliases
-alias ll='ls -alhF'
+alias ll='ls -alhvF'
 alias la='ls -A'
 alias l='ls -CF'
 alias rm='rm -i'
