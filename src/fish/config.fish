@@ -1,7 +1,7 @@
 alias ls="ls --color=auto"
 
 # Alias
-alias ll="ls -alhF"
+alias ll="ls -alhvF"
 alias la="ls -A"
 alias l="ls -CF"
 alias rm="rm -i"

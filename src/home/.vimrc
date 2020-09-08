@@ -23,14 +23,37 @@ set hidden
 syntax enable
 " 行番号を表示する
 set number
-" ステータスラインを常時表示
-set laststatus=2
 " 入力中のコマンドを右下に表示する
 set showcmd
 " ウインドウタイトルにファイル名を反映させる
 set title
 " コマンド表示行を2行にする
 set cmdheight=2
+
+" ステータスラインの設定
+"
+" ステータスラインを常時表示
+set laststatus=2
+" ステータスラインにファイルパスを表示
+set statusline=%F
+" ステータスラインに編集状態を表示
+set statusline+=%m
+" ステータスラインに書込権限を表示
+set statusline+=%r
+" ステータスラインにヘルプページ状態を表示
+set statusline+=%h
+" ステータスラインにプレビュー状態を表示
+set statusline+=%w
+" ステータスラインの以降の情報を右寄せにする
+set statusline+=%=
+" ステータスラインにカーソル位置を表示
+set statusline+=Ln\ %l,\ Col\ %02v
+" ステータスラインにファイルエンコーディングを表示
+set statusline+=\ %{&fenc!=''?&fenc:&enc}
+" ステータスラインに改行コードを表示
+set statusline+=\ %{&ff}
+" ステータスラインにファイルタイプを表示
+set statusline+=\ %Y
 
 " エディタ系の動作
 "
