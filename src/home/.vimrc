@@ -59,6 +59,12 @@ set matchtime=1
 nnoremap j gj
 nnoremap k gk
 
+" Exit insert mode with 'jj'.
+imap jj <Esc>
+
+" Always display signcolumn.
+set signcolumn=yes
+
 " 甘えるな
 let sermon='甘えるな'
 nnoremap <Up>    :echo sermon<CR>
@@ -74,3 +80,47 @@ nnoremap <Right> :echo sermon<CR>
 "
 " よくわからないけどとりあえず書いとけ
 set wildmode=list:longest
+
+" Automatically install vim-plug.
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" vim-plug
+call plug#begin('~/.vim/plugged')
+" vim-plugins
+Plug 'scrooloose/nerdtree'
+Plug 'airblade/vim-gitgutter'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" color schenes
+Plug 'sainnhe/sonokai'
+call plug#end()
+
+" NERDTree configs
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+" coc.vim
+function! s:check_back_space() abort
+  let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+noremap <C-f> :call CocAction('format')<CR>
+inoremap <expr><cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+inoremap <silent><expr> <TAB>
+  \ pumvisible() ? "\<C-n>" :
+  \ <SID>check_back_space() ? "\<TAB>" :
+  \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" Enable true color.
+if has('termguicolors')
+  set termguicolors
+endif
+
+" Set color scheme.
+let g:sonokai_style = 'default'
+colorscheme sonokai
