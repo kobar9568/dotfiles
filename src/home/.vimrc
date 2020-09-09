@@ -147,3 +147,7 @@ endif
 " Set color scheme.
 let g:sonokai_style = 'default'
 colorscheme sonokai
+
+" tmux用の追加設定
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
