@@ -112,6 +112,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 " vim-plug
+"
 call plug#begin('~/.vim/plugged')
 " vim-plugins
 Plug 'scrooloose/nerdtree'
@@ -122,32 +123,38 @@ Plug 'sainnhe/sonokai'
 call plug#end()
 
 " NERDTree configs
+"
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
-" coc.vim
-function! s:check_back_space() abort
-  let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-noremap <C-f> :call CocAction('format')<CR>
-inoremap <expr><cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
+" coc.vim configs
+"
 inoremap <silent><expr> <TAB>
   \ pumvisible() ? "\<C-n>" :
   \ <SID>check_back_space() ? "\<TAB>" :
   \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
+function! s:check_back_space() abort
+  let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+noremap <C-f> :call CocAction('format')<CR>
+
 " Enable true color.
+"
 if has('termguicolors')
   set termguicolors
 endif
 
 " Set color scheme.
+"
 let g:sonokai_style = 'default'
 colorscheme sonokai
 
-" tmux用の追加設定
+" set Vim-specific sequences for RGB colors
+"
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
