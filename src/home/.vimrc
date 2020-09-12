@@ -88,6 +88,9 @@ imap jj <Esc>
 " Always display signcolumn.
 set signcolumn=yes
 
+" Set interval to write swap to disk. (For vim-gitgutter.)
+set updatetime=250
+
 " 甘えるな
 let sermon='甘えるな'
 nnoremap <Up>    :echo sermon<CR>
