@@ -34,3 +34,37 @@ $ ./install.sh
 - `:CocInstall coc-markdownlint`
 - `:CocInstall coc-json`
 - `:CocInstall coc-python`
+
+### Update Plugins
+
+```
+:PlugUpdate
+```
+
+- vim-plug管理下のプラグインをアップデートする。
+
+```
+:CocUpdate
+```
+
+- coc-nvim管理下のプラグインをアップデートする。
+
+### Setup coc-go
+
+```
+$ go get golang.org/x/tools/gopls
+```
+
+- `gopls`をインストール。
+
+```
+:CocInstall coc-go
+```
+
+- `coc-go`をインストール。
+
+```
+$ vim a.go
+```
+
+- .goファイルを最初に開いた際に初回セットアップが実行される。
