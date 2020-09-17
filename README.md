@@ -68,3 +68,7 @@ $ vim a.go
 ```
 
 - .goファイルを最初に開いた際に初回セットアップが実行される。
+
+- `gopls`によるコード補完
+- `CocAction('format')`による`gofmt`の実行
+- importの自動解決
