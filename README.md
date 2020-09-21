@@ -52,12 +52,6 @@ $ ./install.sh
 ### Setup coc-go
 
 ```
-$ go get golang.org/x/tools/gopls
-```
-
-- `gopls`をインストール。
-
-```
 :CocInstall coc-go
 ```
 
@@ -68,9 +62,31 @@ $ vim a.go
 ```
 
 - .goファイルを最初に開いた際に初回セットアップが実行される。
+  - `go`にパスが通っている必要がある。
+  - `~/.config/coc/extensions/coc-go-data/bin/`に`gopls`がダウンロードされる。
 
 以下の機能が動作しているかチェック
 
 - `gopls`によるコード補完
 - `CocAction('format')`による`gofmt`の実行
 - importの自動解決
+
+## Golang memo
+
+```
+$ go get golang.org/dl/goX.Y.Z
+```
+
+- `go get`に必要なので、初回は適当にGoのバイナリを用意しておく
+
+```
+$ goX.Y.Z download
+```
+
+- `~/sdk/`に一式降ってくる
+
+```
+$ ln -s $GOBIN/goX.Y.Z $GOBIN/go
+```
+
+- シンボリックリンク作成

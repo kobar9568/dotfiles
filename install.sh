@@ -47,3 +47,7 @@ ln -s $HOME/dotfiles/src/starship/starship.toml $HOME/.config/starship.toml
 # vim config
 mkdir -p $HOME/.vim/
 ln -s $HOME/dotfiles/src/vim/coc-settings.json $HOME/.vim/coc-settings.json
+
+# Golang config
+mkdir -p $HOME/go/bin/
+mkdir -p $HOME/go/src/github.com/kobar9568/
