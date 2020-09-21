@@ -35,20 +35,6 @@ $ ./install.sh
 - `:CocInstall coc-json`
 - `:CocInstall coc-python`
 
-### Update Plugins
-
-```
-:PlugUpdate
-```
-
-- vim-plug管理下のプラグインをアップデートする。
-
-```
-:CocUpdate
-```
-
-- coc-nvim管理下のプラグインをアップデートする。
-
 ### Setup coc-go
 
 ```
@@ -70,6 +56,20 @@ $ vim a.go
 - `gopls`によるコード補完
 - `CocAction('format')`による`gofmt`の実行
 - importの自動解決
+
+### Update Plugins
+
+```
+:PlugUpdate
+```
+
+- vim-plug管理下のプラグインをアップデートする。
+
+```
+:CocUpdate
+```
+
+- coc-nvim管理下のプラグインをアップデートする。
 
 ## Golang memo
 
