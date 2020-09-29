@@ -52,6 +52,7 @@ set visualbell
 " Define system behavior.
 "
 set updatetime=250
+set ttimeoutlen=0
 set wildmode=list:longest
 
 " Define keymappings.
@@ -131,9 +132,9 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " vim-airline configs
 "
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='papercolor'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='powerlineish'
 
 nmap <Leader>d <Plug>AirlineSelectPrevTab
 nmap <Leader>f <Plug>AirlineSelectNextTab
