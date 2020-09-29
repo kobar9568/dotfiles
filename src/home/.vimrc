@@ -29,6 +29,8 @@ set showcmd
 set title
 " コマンド表示行を2行にする
 set cmdheight=2
+" タブラインを常時表示
+set showtabline=2
 
 " ステータスラインの設定
 "
@@ -84,6 +86,9 @@ nnoremap k gk
 
 " Exit insert mode with 'jj'.
 imap jj <Esc>
+
+" Set Leader to the Space key.
+let mapleader = "\<Space>"
 
 " Always display signcolumn.
 set signcolumn=yes
@@ -168,6 +173,9 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 " vim-airline configs
 "
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline_theme='papercolor'
 let g:airline_powerline_fonts = 1
+
+nmap <Leader>d <Plug>AirlineSelectPrevTab
+nmap <Leader>f <Plug>AirlineSelectNextTab
+nmap <Leader>x :bp<bar>sp<bar>bn<bar>bd<CR>
