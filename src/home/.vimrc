@@ -56,21 +56,20 @@ set wildmode=list:longest
 
 " Define keymappings.
 "
-nnoremap j gj
-nnoremap k gk
-imap jj <Esc>
-
 let mapleader = "\<Space>"
 
-let sermon='甘えるな'
-nnoremap <Up>    :echo sermon<CR>
-nnoremap <Down>  :echo sermon<CR>
-nnoremap <Left>  :echo sermon<CR>
-nnoremap <Right> :echo sermon<CR>
-"inoremap <Up>    <Esc>:echo sermon<CR>i
-"inoremap <Down>  <Esc>:echo sermon<CR>i
-"inoremap <Left>  <Esc>:echo sermon<CR>i
-"inoremap <Right> <Esc>:echo sermon<CR>i
+map  <Up>    <Nop>
+imap <Up>    <Nop>
+map  <Down>  <Nop>
+imap <Down>  <Nop>
+map  <Left>  <Nop>
+imap <Left>  <Nop>
+map  <Right> <Nop>
+imap <Right> <Nop>
+
+imap jj <Esc>
+nnoremap j gj
+nnoremap k gk
 
 " Automatically install vim-plug.
 "
