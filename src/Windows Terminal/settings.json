@@ -33,7 +33,8 @@
             "fontSize": 10,
             "cursorShape": "underscore",
             "colorScheme": "Hyper",
-            "tabColor": "#000000"
+            "tabColor": "#000000",
+            "scrollbarState":"hidden"
         },
         "list":
         [
