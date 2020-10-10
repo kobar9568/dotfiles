@@ -10,6 +10,7 @@ alias cp="cp -i"
 alias ..="cd .."
 alias date="date --iso-8601=seconds"
 alias less="less -MR"
+alias stu="git status"
 
 # グリーティングを非表示
 set fish_greeting
