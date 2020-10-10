@@ -31,7 +31,9 @@
             // Put settings here that you want to apply to all profiles.
             "fontFace": "Roboto Mono",
             "fontSize": 10,
-            "cursorShape": "underscore"
+            "cursorShape": "underscore",
+            "colorScheme": "Hyper",
+            "tabColor": "#000000"
         },
         "list":
         [
@@ -40,26 +42,20 @@
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "name": "Windows PowerShell",
                 "commandline": "powershell.exe",
-                "hidden": false,
-                "colorScheme": "Hyper",
-                "tabColor": "#000000"
+                "hidden": false
             },
             {
                 // Make changes here to the cmd.exe profile.
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "name": "Command Prompt",
                 "commandline": "cmd.exe",
-                "hidden": true,
-                "colorScheme": "Hyper",
-                "tabColor": "#000000"
+                "hidden": true
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "hidden": true,
                 "name": "Azure Cloud Shell",
-                "source": "Windows.Terminal.Azure",
-                "colorScheme": "Hyper",
-                "tabColor": "#000000"
+                "source": "Windows.Terminal.Azure"
             }
         ]
     },
