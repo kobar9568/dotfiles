@@ -12,6 +12,7 @@
 
     // You can add more global application settings here.
     // To learn more about global settings, visit https://aka.ms/terminal-global-settings
+    "tabWidthMode": "compact",
 
     // If enabled, selections are automatically copied to your clipboard.
     "copyOnSelect": false,
@@ -28,6 +29,9 @@
         "defaults":
         {
             // Put settings here that you want to apply to all profiles.
+            "fontFace": "Roboto Mono",
+            "fontSize": 10,
+            "cursorShape": "underscore"
         },
         "list":
         [
@@ -36,27 +40,57 @@
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "name": "Windows PowerShell",
                 "commandline": "powershell.exe",
-                "hidden": false
+                "hidden": false,
+                "colorScheme": "Hyper",
+                "tabColor": "#000000"
             },
             {
                 // Make changes here to the cmd.exe profile.
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "name": "Command Prompt",
                 "commandline": "cmd.exe",
-                "hidden": false
+                "hidden": true,
+                "colorScheme": "Hyper",
+                "tabColor": "#000000"
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": false,
+                "hidden": true,
                 "name": "Azure Cloud Shell",
-                "source": "Windows.Terminal.Azure"
+                "source": "Windows.Terminal.Azure",
+                "colorScheme": "Hyper",
+                "tabColor": "#000000"
             }
         ]
     },
 
     // Add custom color schemes to this array.
     // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
-    "schemes": [],
+    "schemes":
+    [
+        {
+            "name": "Hyper",
+            "foreground": "#FFFFFF",
+            "background": "#000000",
+            "cursorColor": "#FFFFFF",
+            "black": "#000000",
+            "red": "#C51E14",
+            "green": "#1DC121",
+            "yellow": "#C7C329",
+            "blue": "#0A2FC4",
+            "purple": "#C839C5",
+            "cyan": "#20C5C6",
+            "white": "#C7C7C7",
+            "brightBlack": "#686868",
+            "brightRed": "#FD6F6B",
+            "brightGreen": "#67F86F",
+            "brightYellow": "#FFFA72",
+            "brightBlue": "#6A76FB",
+            "brightPurple": "#FD7CFC",
+            "brightCyan": "#68FDFE",
+            "brightWhite": "#FFFFFF"
+        }
+    ],
 
     // Add custom actions and keybindings to this array.
     // To unbind a key combination from your defaults.json, set the command to "unbound".
@@ -66,8 +100,6 @@
         // Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.
         // These two lines additionally bind them to Ctrl+C and Ctrl+V.
         // To learn more about selection, visit https://aka.ms/terminal-selection
-        { "command": {"action": "copy", "singleLine": false }, "keys": "ctrl+c" },
-        { "command": "paste", "keys": "ctrl+v" },
 
         // Press Ctrl+Shift+F to open the search box
         { "command": "find", "keys": "ctrl+shift+f" },
