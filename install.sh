@@ -32,6 +32,8 @@ ln -s $HOME/dotfiles/src/bat/config $HOME/.config/bat/config
 # fish config
 mkdir -p $HOME/.config/fish/
 ln -s $HOME/dotfiles/src/fish/config.fish $HOME/.config/fish/config.fish
+mkdir -p $HOME/.config/fish/functions/
+ln -s $HOME/dotfiles/src/fish/fish_title.fish $HOME/.config/fish/functions/fish_title.fish
 
 # tmux config
 ln -s $HOME/dotfiles/src/tmux/.tmux.conf $HOME/.tmux.conf
