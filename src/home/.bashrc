@@ -134,4 +134,6 @@ alias go='$GOBIN/go$go_version'
 alias gofmt='$HOME/sdk/go$go_version/bin/gofmt'
 
 # Exec fish.
-exec fish
+if type "fish" > /dev/null 2>&1; then
+    exec fish
+fi
