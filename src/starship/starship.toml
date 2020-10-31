@@ -1,7 +1,8 @@
 add_newline = false
 
 [character]
-symbol = "$"
+symbol = "INSERT $"
+vicmd_symbol = "NORMAL $"
 
 [git_branch]
 symbol = "🌲 "
