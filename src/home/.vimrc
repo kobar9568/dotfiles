@@ -72,6 +72,9 @@ imap jj <Esc>
 nnoremap j gj
 nnoremap k gk
 
+" Turn off paste mode when leaving INSERT mode.
+autocmd InsertLeave * set nopaste
+
 " Automatically install vim-plug.
 "
 if empty(glob('~/.vim/autoload/plug.vim'))
