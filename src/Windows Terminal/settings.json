@@ -34,6 +34,7 @@
             "cursorShape": "underscore",
             "colorScheme": "Hyper",
             "tabColor": "#000000",
+            "padding": "0, 0, 0, 0",
             "scrollbarState":"hidden"
         },
         "list":
