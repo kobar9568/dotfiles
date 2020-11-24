@@ -46,7 +46,6 @@ set smartindent
 set list listchars=tab:->
 set showmatch
 set matchtime=1
-set virtualedit=onemore
 set visualbell
 
 " Define system behavior.
@@ -72,6 +71,10 @@ imap jj <Esc>
 nnoremap j gj
 nnoremap k gk
 
+nmap <Leader>d <Plug>AirlineSelectPrevTab
+nmap <Leader>f <Plug>AirlineSelectNextTab
+nnoremap <Leader>x :bp<bar>sp<bar>bn<bar>bd<CR>
+
 " Turn off paste mode when leaving INSERT mode.
 autocmd InsertLeave * set nopaste
 
@@ -93,13 +96,14 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
+Plug 'Townk/vim-autoclose'
 " color schenes
 Plug 'sainnhe/sonokai'
 call plug#end()
 
 " NERDTree configs
 "
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
+nnoremap <C-e> :NERDTreeToggle<CR>
 
 " coc.vim configs
 "
@@ -116,7 +120,8 @@ endfunction
 
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-noremap <C-f> :call CocAction('format')<CR>
+nnoremap <C-f> :call CocAction('format')<CR>
+nnoremap <C-d> :call CocAction('jumpDefinition')<CR>
 
 " Enable true color.
 "
@@ -139,7 +144,3 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='papercolor'
-
-nmap <Leader>d <Plug>AirlineSelectPrevTab
-nmap <Leader>f <Plug>AirlineSelectNextTab
-nmap <Leader>x :bp<bar>sp<bar>bn<bar>bd<CR>
