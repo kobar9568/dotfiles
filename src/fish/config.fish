@@ -2,8 +2,8 @@ alias ls="ls --color=auto"
 
 # Alias
 alias ls="exa"
-alias ll="exa -laghHm --git --time-style long-iso"
-alias la="exa -a"
+alias ll="exa -laaghHm --git --time-style long-iso"
+alias la="exa -aa"
 alias rm="rm -i"
 alias mv="mv -i"
 alias cp="cp -i"
