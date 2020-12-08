@@ -96,19 +96,24 @@ endif
 
 " Plugins
 "
-call plug#begin('~/.vim/plugged')
-" vim-plugins
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'airblade/vim-gitgutter'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-surround'
-Plug 'Townk/vim-autoclose'
-" color schenes
-Plug 'sainnhe/sonokai'
-call plug#end()
+if has('unix')
+  call plug#begin('~/.vim/plugged')
+  " vim-plugins
+  Plug 'scrooloose/nerdtree'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'tpope/vim-surround'
+  Plug 'Townk/vim-autoclose'
+  " color schenes
+  Plug 'sainnhe/sonokai'
+  call plug#end()
+elseif has('win32')
+  call plug#begin($HOME . '/vimfiles/plugged')
+  call plug#end()
+endif
 
 " NERDTree configs
 "
