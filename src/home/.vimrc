@@ -86,6 +86,12 @@ if has('unix')
       \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
   endif
+elseif has('win32')
+  if empty(glob($HOME . '/vimfiles/autoload/plug.vim'))
+    silent execute('!curl -fLo ' . $HOME . '/vimfiles/autoload/plug.vim --create-dirs '
+      \ . 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim')
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  endif
 endif
 
 " Plugins
