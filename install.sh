@@ -38,6 +38,7 @@ ln -s $HOME/dotfiles/src/fish/fish_user_key_bindings.fish $HOME/.config/fish/fun
 
 # tmux config
 ln -s $HOME/dotfiles/src/tmux/.tmux.conf $HOME/.tmux.conf
+git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 
 # htop config
 mkdir -p $HOME/.config/htop/
