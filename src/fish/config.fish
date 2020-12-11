@@ -11,6 +11,7 @@ alias ..="cd .."
 alias date="date --iso-8601=seconds"
 alias less="less -MR"
 alias stu="git status"
+alias hd="hexyl"
 
 # Key bindings
 fish_vi_key_bindings
