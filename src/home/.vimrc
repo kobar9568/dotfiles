@@ -44,7 +44,7 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set smartindent
-set list listchars=tab:->
+set list listchars=tab:->,trail:-
 set showmatch
 set matchtime=1
 set visualbell
