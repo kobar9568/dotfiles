@@ -21,9 +21,13 @@ $ ./install.sh
 # Set-ExecutionPolicy Bypass
 ```
 
-### 2. 一般ユーザーにシンボリックリンクの作成権限を与える
+### 2. インストールする
 
-`gpedit.msc`から、一般ユーザーにシンボリックリンクの作成権限を与える
+管理者権限のPowerShellで
+
+```
+# ./Install.ps1
+```
 
 ## Vim memo
 
