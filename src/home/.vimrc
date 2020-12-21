@@ -23,6 +23,7 @@ set cmdheight=2
 set showtabline=2
 set signcolumn=yes
 set splitbelow
+set splitright
 
 " statusline configs.
 "
