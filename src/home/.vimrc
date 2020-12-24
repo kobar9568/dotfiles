@@ -70,8 +70,6 @@ map  <Right> <Nop>
 imap <Right> <Nop>
 
 imap jj <Esc>
-nnoremap j gj
-nnoremap k gk
 
 nmap <Leader>d <Plug>AirlineSelectPrevTab
 nmap <Leader>f <Plug>AirlineSelectNextTab
