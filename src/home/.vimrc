@@ -60,16 +60,16 @@ set wildmode=list:longest
 "
 let mapleader = "\<Space>"
 
-map  <Up>    <Nop>
-imap <Up>    <Nop>
-map  <Down>  <Nop>
-imap <Down>  <Nop>
-map  <Left>  <Nop>
-imap <Left>  <Nop>
-map  <Right> <Nop>
-imap <Right> <Nop>
+noremap  <Up>    <Nop>
+noremap  <Down>  <Nop>
+noremap  <Left>  <Nop>
+noremap  <Right> <Nop>
+inoremap <Up>    <Nop>
+inoremap <Down>  <Nop>
+inoremap <Left>  <Nop>
+inoremap <Right> <Nop>
 
-imap jj <Esc>
+inoremap jj <Esc>
 
 nmap <Leader>d <Plug>AirlineSelectPrevTab
 nmap <Leader>f <Plug>AirlineSelectNextTab
