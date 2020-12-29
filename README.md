@@ -34,10 +34,11 @@ $ ./install.sh
 - vimのプラグインマネージャはvim-plugを使用
   - 初回起動時に本体とプラグインのインストールが行われる
 - coc.nvimがNode.jsに依存する
+- coc-pyrightがNode.js 12以降に依存する
 
 - `:CocInstall coc-markdownlint`
 - `:CocInstall coc-json`
-- `:CocInstall coc-python`
+- `:CocInstall coc-pyright`
 
 ### Setup coc-go
 
