@@ -36,9 +36,9 @@ $ ./install.sh
 - coc.nvimがNode.jsに依存する
 - coc-pyrightがNode.js 12以降に依存する
 
-- `:CocInstall coc-markdownlint`
-- `:CocInstall coc-json`
-- `:CocInstall coc-pyright`
+```
+:CocInstall coc-json coc-markdownlint coc-go coc-pyright
+```
 
 ### Setup coc-go
 
