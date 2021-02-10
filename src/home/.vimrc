@@ -107,6 +107,7 @@ if has('unix')
   Plug 'vim-airline/vim-airline-themes'
   Plug 'tpope/vim-surround'
   Plug 'Townk/vim-autoclose'
+  Plug 'dag/vim-fish'
   " color schenes
   Plug 'sainnhe/sonokai'
   call plug#end()

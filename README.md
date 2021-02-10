@@ -37,7 +37,7 @@ $ ./install.sh
 - coc-pyrightがNode.js 12以降に依存する
 
 ```
-:CocInstall coc-json coc-yaml coc-markdownlint coc-go coc-pyright
+:CocInstall coc-fish coc-json coc-yaml coc-markdownlint coc-go coc-pyright
 ```
 
 ### Setup coc-go
