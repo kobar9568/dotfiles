@@ -16,8 +16,11 @@ ln -s $HOME/dotfiles/src/.ssh/config $HOME/.ssh/config
 chmod 600 $HOME/.ssh/config
 
 # VSCode config
-ln -s $HOME/dotfiles/src/vscode/settings.json $HOME/.config/Code/User/settings.json
-ln -s $HOME/dotfiles/src/vscode/keybindings.json $HOME/.config/Code/User/keybindings
+if [ -n "$DISPLAY" ]; then
+  mkdir -p $HOME/.config/Code/User/
+  ln -s $HOME/dotfiles/src/vscode/settings.json $HOME/.config/Code/User/settings.json
+  ln -s $HOME/dotfiles/src/vscode/keybindings.json $HOME/.config/Code/User/keybindings
+fi
 
 # Termux config
 if [ `uname -o` = "Android" ]; then
