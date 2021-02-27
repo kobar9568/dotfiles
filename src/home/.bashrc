@@ -138,6 +138,11 @@ if type "starship" > /dev/null 2>&1; then
     export STARSHIP_CONFIG=~/.config/starship/starship.toml
 fi
 
+# Declare Powerline repository root directory.
+if type "powerline" > /dev/null 2>&1; then
+    export POWERLINE_REPOSITORY_ROOT=`pip3 show powerline-status | grep Location: | awk '{print $2}'`
+fi
+
 # Exec fish.
 if type "fish" > /dev/null 2>&1; then
     exec fish
