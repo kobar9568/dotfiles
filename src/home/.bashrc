@@ -143,7 +143,7 @@ if type "powerline" > /dev/null 2>&1; then
     export POWERLINE_REPOSITORY_ROOT=`pip3 show powerline-status | grep Location: | awk '{print $2}'`
 fi
 
-# Exec fish.
+# Exec fish. (keep this line at the very bottom of .bashrc)
 if type "fish" > /dev/null 2>&1; then
     exec fish
 fi
