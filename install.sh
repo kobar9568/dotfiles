@@ -49,8 +49,8 @@ mkdir -p $HOME/.config/htop/
 ln -s $HOME/dotfiles/src/htop/htoprc $HOME/.config/htop/htoprc
 
 # starship config
-mkdir -p $HOME/.config/
-ln -s $HOME/dotfiles/src/starship/starship.toml $HOME/.config/starship.toml
+mkdir -p $HOME/.config/starship/
+ln -s $HOME/dotfiles/src/starship/starship.toml $HOME/.config/starship/starship.toml
 
 # vim config
 mkdir -p $HOME/.vim/
