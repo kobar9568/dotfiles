@@ -17,11 +17,11 @@ if type "batcat" > /dev/null 2>&1
     alias bat="batcat"
 end
 
-# Key bindings
+# Activate vi mode.
 fish_vi_key_bindings
 
-# グリーティングを非表示
+# Remove the greeting.
 set fish_greeting
 
-# Starshipを有効化
+# Activate starship.
 starship init fish | source
