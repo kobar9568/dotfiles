@@ -13,6 +13,10 @@ alias less="less -MR"
 alias stu="git status"
 alias hd="hexyl"
 
+if type "batcat" > /dev/null 2>&1
+    alias bat="batcat"
+end
+
 # Key bindings
 fish_vi_key_bindings
 
