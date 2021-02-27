@@ -1,8 +1,9 @@
 add_newline = false
 
 [character]
-symbol = "INSERT $"
-vicmd_symbol = "NORMAL $"
+success_symbol = '[INSERT \$](green)'
+error_symbol = '[INSERT \$](red)'
+vicmd_symbol = '[NORMAL \$](green)'
 
 [git_branch]
 symbol = "🌲 "
