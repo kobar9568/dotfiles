@@ -58,6 +58,8 @@ ln -s $HOME/dotfiles/src/powerline/colors.json $HOME/.config/powerline/colors.js
 ln -s $HOME/dotfiles/src/powerline/config.json $HOME/.config/powerline/config.json
 mkdir -p $HOME/.config/powerline/colorschemes/
 mkdir -p $HOME/.config/powerline/themes/
+mkdir -p $HOME/.config/powerline/themes/tmux/
+ln -s $HOME/dotfiles/src/powerline/themes/tmux/tmux_config.json $HOME/.config/powerline/themes/tmux/tmux_config.json
 
 # vim config
 mkdir -p $HOME/.vim/
