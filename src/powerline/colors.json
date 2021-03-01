@@ -77,7 +77,16 @@
 		"solarized:violet": [13, "6c71c4"],
 		"solarized:blue": [4, "268bd2"],
 		"solarized:cyan": [6, "2aa198"],
-		"solarized:green": [2, "859900"]
+		"solarized:green": [2, "859900"],
+
+		"deus_airline:red": [204, "e06c75"],
+		"deus_airline:green": [114, "98c379"],
+		"deus_airline:yellow": [180, "e5c07b"],
+		"deus_airline:blue": [39, "61afef"],
+		"deus_airline:purple": [170, "c678dd"],
+		"deus_airline:white": [145, "abb2bf"],
+		"deus_airline:black": [235, "282c34"],
+		"deus_airline:gray": [236, "3e4452"]
 	},
 	"gradients": {
 		"dark_GREEN_Orange_red": [
