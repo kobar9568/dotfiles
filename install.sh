@@ -61,6 +61,10 @@ mkdir -p $HOME/.config/powerline/themes/
 mkdir -p $HOME/.config/powerline/themes/tmux/
 ln -s $HOME/dotfiles/src/powerline/themes/tmux/tmux_config.json $HOME/.config/powerline/themes/tmux/tmux_config.json
 
+ln -s $HOME/dotfiles/src/powerline/colorschemes/deus.json $HOME/.config/powerline/colorschemes/deus.json
+mkdir -p $HOME/.config/powerline/colorschemes/tmux/
+ln -s $HOME/dotfiles/src/powerline/colorschemes/tmux/deus.json $HOME/.config/powerline/colorschemes/tmux/deus.json
+
 # vim config
 mkdir -p $HOME/.vim/
 ln -s $HOME/dotfiles/src/vim/coc-settings.json $HOME/.vim/coc-settings.json
