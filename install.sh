@@ -52,6 +52,13 @@ ln -s $HOME/dotfiles/src/htop/htoprc $HOME/.config/htop/htoprc
 mkdir -p $HOME/.config/starship/
 ln -s $HOME/dotfiles/src/starship/starship.toml $HOME/.config/starship/starship.toml
 
+# Powerline config
+mkdir -p $HOME/.config/powerline/
+ln -s $HOME/dotfiles/src/powerline/colors.json $HOME/.config/powerline/colors.json
+ln -s $HOME/dotfiles/src/powerline/config.json $HOME/.config/powerline/config.json
+mkdir -p $HOME/.config/powerline/colorschemes/
+mkdir -p $HOME/.config/powerline/themes/
+
 # vim config
 mkdir -p $HOME/.vim/
 ln -s $HOME/dotfiles/src/vim/coc-settings.json $HOME/.vim/coc-settings.json
