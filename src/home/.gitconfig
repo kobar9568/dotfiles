@@ -1,13 +1,13 @@
 [user]
-    name = "Ryota Kobayashi"
-    email = "38117745+kobar9568@users.noreply.github.com"
+	name = "Ryota Kobayashi"
+	email = "38117745+kobar9568@users.noreply.github.com"
 [color]
-    ui = auto
+	ui = auto
 [core]
-    autoCRLF = false
-    pager = "LESSCHARSET=utf-8 less"
+	autoCRLF = false
+	pager = "LESSCHARSET=utf-8 less"
 [pull]
-    rebase = false
+	rebase = false
 [diff]
 	tool = vimdiff
 [difftool]
