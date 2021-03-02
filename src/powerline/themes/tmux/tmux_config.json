@@ -1,10 +1,5 @@
 {
 	"segments": {
-		"left": [
-			{
-				"function": "powerline.segments.common.net.hostname"
-			}
-		],
 		"right": [
 			{
 				"function": "powerline.segments.common.bat.battery"
@@ -22,9 +17,6 @@
 					"format": "%H:%M:%S",
 					"istime": true
 				}
-			},
-			{
-				"function": "powerline.segments.common.env.user"
 			}
 		]
 	}
