@@ -11,6 +11,8 @@ alias ..="cd .."
 alias date="date --iso-8601=seconds"
 alias less="less -MR"
 alias stu="git status"
+alias gd="git diff"
+alias gdv="git difftool"
 alias hd="hexyl"
 
 if type "batcat" > /dev/null 2>&1
