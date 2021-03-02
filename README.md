@@ -1,5 +1,7 @@
 # dotfiles
 
+![main](https://user-images.githubusercontent.com/38117745/109606294-ca416d00-7b69-11eb-84e1-fbc6b34edb1b.png)
+
 ## Memo
 
 - Windowsでリポジトリをcloneする前に、gitの改行コード自動変換の設定を無効にしておく
