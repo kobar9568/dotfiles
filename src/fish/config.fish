@@ -14,6 +14,7 @@ alias stu="git status"
 alias gd="git diff"
 alias gdv="git difftool"
 alias hd="hexyl"
+alias tkill="tmux kill-server"
 
 if type "batcat" > /dev/null 2>&1
     alias bat="batcat"
