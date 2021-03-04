@@ -1,6 +1,5 @@
-// 既定値を上書きするには、このファイル内にキー バインドを挿入しますauto[]
 [
-    // デフォルトキーバインド削除
+    // Delete default keybinds.
     {
         "key": "ctrl+b",
         "command": "-workbench.action.toggleSidebarVisibility"
@@ -8,6 +7,15 @@
     {
         "key": "ctrl+n",
         "command": "-workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+0",
+        "command": "-workbench.action.focusSideBar"
     },
     {
         "key": "ctrl+oem_plus",
@@ -37,10 +45,26 @@
         "key": "alt+1",
         "command": "-workbench.action.openEditorAtIndex1"
     },
-    // キーバインド定義
+    // Declare keybinds.
     {
         "key": "alt+1",
         "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+=",
+        "command": "editor.action.fontZoomIn"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "editor.action.fontZoomOut"
+    },
+    {
+        "key": "ctrl+0",
+        "command": "editor.action.fontZoomReset"
     },
     {
         "key": "f8",

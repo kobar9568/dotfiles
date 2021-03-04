@@ -3,7 +3,7 @@
     "editor.renderWhitespace": "boundary",
     "files.eol": "\n",
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Monokai Dimmed",
+    "workbench.colorTheme": "Sonokai",
     "workbench.tips.enabled": false,
     "window.closeWhenEmpty": true,
     "explorer.confirmDragAndDrop": false,
@@ -13,15 +13,54 @@
     "telemetry.enableTelemetry": false,
     "git.ignoreMissingGitWarning": true,
     "markdown.preview.fontFamily": "Meiryo",
-    "editor.fontFamily": "Consolas, 'Courier New', monospace, Meiryo",
+    "editor.fontFamily": "'Roboto Mono for Powerline', Meiryo",
+    "editor.cursorStyle": "underline-thin",
     "diffEditor.ignoreTrimWhitespace": true,
     "diffEditor.renderSideBySide": true,
+    "python.showStartPage": false,
+    "python.languageServer": "Pylance",
     "markdownlint.config": {
-        "MD014": false,
-        "MD024": false,
-        "MD025": false,
-        "MD026": false,
-        "MD033": false,
-        "MD040": false
-    }
+        "extends": ".markdownlintrc"
+    },
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<Up>"],
+            "after": ["<Nop>"]
+        },
+        {
+            "before": ["<Down>"],
+            "after": ["<Nop>"]
+        },
+        {
+            "before": ["<Left>"],
+            "after": ["<Nop>"]
+        },
+        {
+            "before": ["<Right>"],
+            "after": ["<Nop>"]
+        }
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<Up>"],
+            "after": ["<Nop>"]
+        },
+        {
+            "before": ["<Down>"],
+            "after": ["<Nop>"]
+        },
+        {
+            "before": ["<Left>"],
+            "after": ["<Nop>"]
+        },
+        {
+            "before": ["<Right>"],
+            "after": ["<Nop>"]
+        },
+
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ]
 }

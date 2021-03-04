@@ -29,7 +29,7 @@
         "defaults":
         {
             // Put settings here that you want to apply to all profiles.
-            "fontFace": "Roboto Mono",
+            "fontFace": "Roboto Mono for Powerline",
             "fontSize": 10,
             "cursorShape": "underscore",
             "colorScheme": "Hyper",
