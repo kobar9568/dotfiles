@@ -113,6 +113,17 @@ if has('unix')
   call plug#end()
 elseif has('win32')
   call plug#begin($HOME . '/vimfiles/plugged')
+  " vim-plugins
+  Plug 'scrooloose/nerdtree'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'tpope/vim-surround'
+  Plug 'Townk/vim-autoclose'
+  Plug 'dag/vim-fish'
+  " color schenes
+  Plug 'sainnhe/sonokai'
   call plug#end()
 endif
 
@@ -151,8 +162,10 @@ colorscheme sonokai
 
 " Set Vim-specific sequences for RGB colors
 "
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+if has('unix')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
 
 " vim-airline configs
 "
