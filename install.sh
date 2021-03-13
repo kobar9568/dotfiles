@@ -80,6 +80,7 @@ if ! type "go" > /dev/null 2>&1; then
     wget https://golang.org/dl/go1.16.2.linux-amd64.tar.gz -O $HOME/go_install/go1.16.2.linux-amd64.tar.gz
     tar xf $HOME/go_install/go1.16.2.linux-amd64.tar.gz -C ~/go_install/
   elif [ `uname -m` = "aarch64" ]; then
+    # Not tested
     wget https://golang.org/dl/go1.16.2.linux-arm64.tar.gz -O $HOME/go_install/go1.16.2.linux-arm64.tar.gz
     tar xf $HOME/go_install/go1.16.2.linux-arm64.tar.gz -C ~/go_install/
   fi
