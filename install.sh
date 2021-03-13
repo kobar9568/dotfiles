@@ -72,3 +72,19 @@ ln -s $HOME/dotfiles/src/vim/coc-settings.json $HOME/.vim/coc-settings.json
 # Golang config
 mkdir -p $HOME/go/bin/
 mkdir -p $HOME/go/src/github.com/kobar9568/
+
+# Golang installation
+if ! type "go" > /dev/null 2>&1; then
+  mkdir $HOME/go_install/
+  if [ `uname -m` = "x86_64" ]; then
+    wget https://golang.org/dl/go1.16.2.linux-amd64.tar.gz -O $HOME/go_install/go1.16.2.linux-amd64.tar.gz
+    tar xf $HOME/go_install/go1.16.2.linux-amd64.tar.gz -C ~/go_install/
+  elif [ `uname -m` = "aarch64" ]; then
+    wget https://golang.org/dl/go1.16.2.linux-arm64.tar.gz -O $HOME/go_install/go1.16.2.linux-arm64.tar.gz
+    tar xf $HOME/go_install/go1.16.2.linux-arm64.tar.gz -C ~/go_install/
+  fi
+  $HOME/go_install/go/bin/go get golang.org/dl/go1.16.2
+  go1.16.2 download
+  ln -s go1.16.2 $GOBIN/go
+  rm -rf $HOME/go_install/
+fi
