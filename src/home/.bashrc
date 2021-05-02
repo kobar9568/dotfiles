@@ -127,12 +127,6 @@ export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
-# Golang version control
-go_version='1.15'
-
-alias go='$GOBIN/go$go_version'
-alias gofmt='$HOME/sdk/go$go_version/bin/gofmt'
-
 # starship config file location.
 if type "starship" > /dev/null 2>&1; then
     export STARSHIP_CONFIG=~/.config/starship/starship.toml
