@@ -90,4 +90,5 @@ if ! type "go" > /dev/null 2>&1; then
   go$GO_VERSION download
   ln -s go$GO_VERSION $GOBIN/go
   rm -rf $HOME/go_install/
+  go install github.com/pilu/fresh@latest
 fi
