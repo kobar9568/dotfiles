@@ -146,7 +146,7 @@ endfunction
 
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-nnoremap <C-f> :call CocAction('format')<CR>
+nnoremap <C-f> :silent call CocAction('runCommand', 'editor.action.organizeImport')<CR>:call CocAction('format')<CR>
 nnoremap <C-d> :call CocAction('jumpDefinition')<CR>
 
 " Enable true color.
