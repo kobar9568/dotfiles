@@ -5,6 +5,7 @@
     "workbench.startupEditor": "newUntitledFile",
     "workbench.colorTheme": "Sonokai",
     "workbench.tips.enabled": false,
+    "workbench.editor.untitled.hint": "hidden",
     "window.closeWhenEmpty": true,
     "explorer.confirmDragAndDrop": false,
     "terminal.integrated.cursorBlinking": true,
