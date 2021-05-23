@@ -13,6 +13,13 @@ set nofixeol
 set autoread
 set hidden
 
+" Define Newline code.
+"
+if has('win32')
+  set fileformat=unix
+  edit ++fileformat=unix
+endif
+
 " Define UI behavior.
 "
 syntax enable
