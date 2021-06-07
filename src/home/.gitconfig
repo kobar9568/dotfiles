@@ -12,3 +12,5 @@
 	tool = vimdiff
 [difftool]
 	prompt = false
+[init]
+	defaultBranch = master
