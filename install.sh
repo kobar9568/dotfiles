@@ -39,6 +39,7 @@ mkdir -p $HOME/.config/fish/functions/
 ln -s $HOME/dotfiles/src/fish/fish_title.fish $HOME/.config/fish/functions/fish_title.fish
 ln -s $HOME/dotfiles/src/fish/fish_user_key_bindings.fish $HOME/.config/fish/functions/fish_user_key_bindings.fish
 ln -s $HOME/dotfiles/src/fish/fuck.fish $HOME/.config/fish/functions/fuck.fish
+ln -s $HOME/dotfiles/src/fish/repo.fish $HOME/.config/fish/functions/repo.fish
 
 # tmux config
 ln -s $HOME/dotfiles/src/tmux/.tmux.conf $HOME/.tmux.conf
