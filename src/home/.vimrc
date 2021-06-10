@@ -16,6 +16,7 @@ set hidden
 " Define Newline code.
 "
 if has('win32')
+  set encoding=utf-8
   set fileformat=unix
   edit ++fileformat=unix
 endif
