@@ -57,6 +57,7 @@ set list listchars=tab:->,trail:-
 set showmatch
 set matchtime=1
 set visualbell
+set backspace=2
 
 " Define system behavior.
 "
