@@ -176,6 +176,12 @@ if has('unix')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 
+" Fix background color renders for Windows Terminal.
+"
+if has('win32')
+  set t_ut=""
+endif
+
 " vim-airline configs
 "
 let g:airline_powerline_fonts = 1
