@@ -4,8 +4,11 @@
 
 ## Memo
 
-- Windowsでリポジトリをcloneする前に、gitの改行コード自動変換の設定を無効にしておく
+### Windowsでのclone
+
+- Windowsでこのリポジトリをcloneする前に、gitの改行コード自動変換の設定を無効にしておくこと
 - cloneしたら、`~/.gitconfig`は削除しておく
+- もしくは、cloneしてインストール後に`$ git checkout .`を実行し、自動変換された改行コードを元に戻すこと
 
 ## Installation (Linux)
 
