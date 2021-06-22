@@ -87,6 +87,12 @@ nnoremap <Leader>x :bp<bar>sp<bar>bn<bar>bd<CR>
 " Turn off paste mode when leaving INSERT mode.
 autocmd InsertLeave * set nopaste
 
+" Set Shell for Windows.
+"
+if has('win32')
+  set shell=PowerShell\ -ExecutionPolicy\ Bypass
+endif
+
 " Automatically install vim-plug.
 "
 if has('unix')
