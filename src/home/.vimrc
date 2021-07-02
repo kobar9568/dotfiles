@@ -65,6 +65,12 @@ set updatetime=250
 set ttimeoutlen=0
 set wildmode=list:longest
 
+" Define registers behavior.
+"
+if has('win32')
+  set clipboard=unnamed
+endif
+
 " Define keymappings.
 "
 let mapleader = "\<Space>"
