@@ -24,17 +24,53 @@
     {
       "pattern": "https://www.directorz.ad.jp/*",
       "passKeys": ""
+    },
+    {
+      "pattern": "https://hackmd.io/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://typing.tanonews.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://playoverwatch.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://www.microsoft.com/applied-sciences/projects/anti-ghosting-demo",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://www.e-typing.ne.jp/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://classic.minecraft.net/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://typingx0.net/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://fgt1.intra.kobar9568.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://esxi.intra.kobar9568.com/*",
+      "passKeys": ""
     }
   ],
   "filterLinkHints": false,
   "waitForEnterForFilteredHints": true,
   "hideHud": false,
-  "keyMappings": "unmapAll\n\n# Navigating the page\nmap j scrollDown\nmap k scrollUp\nmap gg scrollToTop\nmap G scrollToBottom\nmap h scrollLeft\nmap l scrollRight\nmap s reload\nmap yy copyCurrentUrl\nmap p openCopiedUrlInNewTab\nmap P openCopiedUrlInCurrentTab\nmap v enterVisualMode\nmap i LinkHints.activateModeToOpenInNewTab\nmap I LinkHints.activateMode\nmap [[ goPrevious\nmap ]] goNext\n\n# Using the vomnibar\nmap o Vomnibar.activateInNewTab\nmap O Vomnibar.activate\nmap b Vomnibar.activateBookmarksInNewTab\nmap B Vomnibar.activateBookmarks\n\n# Using find\nmap / enterFindMode\nmap n performFind\nmap N performBackwardsFind\n\n# Navigating history\nmap r goBack\nmap <pageup> goBack\nmap u goForward\nmap <pagedown> goForward\n\n# Manipulating tabs\nmap t createTab\nmap d previousTab\nmap f nextTab\nmap x removeTab\n\n# Miscellaneous\nmap ? showHelp",
+  "keyMappings": "unmapAll\n\n# Navigating the page\nmap j scrollDown\nmap k scrollUp\nmap gg scrollToTop\nmap G scrollToBottom\nmap h scrollLeft\nmap l scrollRight\nmap s reload\nmap yy copyCurrentUrl\nmap p openCopiedUrlInNewTab\nmap P openCopiedUrlInCurrentTab\nmap v enterVisualMode\nmap i LinkHints.activateModeToOpenInNewTab\nmap I LinkHints.activateMode\nmap [[ goPrevious\nmap ]] goNext\n\n# Using the vomnibar\nmap o Vomnibar.activateInNewTab\nmap O Vomnibar.activate\nmap b Vomnibar.activateBookmarksInNewTab\nmap B Vomnibar.activateBookmarks\n\n# Using find\nmap / enterFindMode\nmap n performFind\nmap N performBackwardsFind\n\n# Navigating history\nmap u goBack\nmap <pageup> goBack\nmap <c-r> goForward\nmap <pagedown> goForward\n\n# Manipulating tabs\nmap t createTab\nmap d previousTab\nmap f nextTab\nmap x removeTab\n\n# Miscellaneous\nmap ? showHelp",
   "linkHintCharacters": "sadfjklewcmpgh",
   "linkHintNumbers": "0123456789",
   "newTabUrl": "about:newtab",
-  "nextPatterns": "次へ",
-  "previousPatterns": "前へ",
+  "nextPatterns": "next,more,>,→,»,≫,>>,次へ,進む,もっと見る,もっとみる,次のページ",
+  "previousPatterns": "prev,previous,back,<,←,«,≪,<<,前へ,戻る,前のページ",
   "regexFindMode": false,
   "ignoreKeyboardLayout": false,
   "scrollStepSize": 60,
