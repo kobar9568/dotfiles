@@ -13,6 +13,8 @@
     // You can add more global application settings here.
     // To learn more about global settings, visit https://aka.ms/terminal-global-settings
     "tabWidthMode": "compact",
+    "initialCols": 80,
+    "initialRows": 24,
 
     // If enabled, selections are automatically copied to your clipboard.
     "copyOnSelect": false,
