@@ -19,6 +19,7 @@
     "diffEditor.ignoreTrimWhitespace": true,
     "diffEditor.renderSideBySide": true,
     "security.workspace.trust.enabled": false,
+    "language-hsp3.compiler": "C:\\Program Files (x86)\\hsp351\\hspc.exe",
     "python.showStartPage": false,
     "python.languageServer": "Pylance",
     "markdownlint.config": {
