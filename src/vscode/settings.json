@@ -18,6 +18,7 @@
     "editor.cursorStyle": "underline-thin",
     "diffEditor.ignoreTrimWhitespace": true,
     "diffEditor.renderSideBySide": true,
+    "security.workspace.trust.enabled": false,
     "python.showStartPage": false,
     "python.languageServer": "Pylance",
     "markdownlint.config": {
