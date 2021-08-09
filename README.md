@@ -112,5 +112,6 @@ code --install-extension <extension-id[@version] | path-to-vsix>
 ### インストールメモ
 
 ```
+code --install-extension jamiewoodio.cisco
 code --install-extension GSGBen.fortigate-fortios-syntax
 ```
