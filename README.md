@@ -100,3 +100,17 @@ $ ln -s $GOBIN/goX.Y.Z $GOBIN/go
 ```
 
 - シンボリックリンク作成
+
+## VSCode memo
+
+### 拡張機能のCLIインストール
+
+```
+code --install-extension <extension-id[@version] | path-to-vsix>
+```
+
+### インストールメモ
+
+```
+code --install-extension GSGBen.fortigate-fortios-syntax
+```
