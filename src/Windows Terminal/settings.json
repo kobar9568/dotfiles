@@ -38,6 +38,8 @@
             "tabColor": "#000000",
             "padding": "0, 0, 0, 0",
             "scrollbarState": "hidden",
+            "useAcrylic": false,
+            "acrylicOpacity": 0.5,
             "bellStyle": "none"
         },
         "list":
