@@ -26,6 +26,7 @@
     "markdownlint.config": {
         "extends": ".markdownlintrc"
     },
+    "vim.useSystemClipboard": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["<Up>"],
