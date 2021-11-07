@@ -26,6 +26,7 @@
     "markdownlint.config": {
         "extends": ".markdownlintrc"
     },
+    "vim.cursorStylePerMode.normal": "underline-thin",
     "vim.useSystemClipboard": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         {
