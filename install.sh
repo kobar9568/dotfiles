@@ -41,6 +41,7 @@ ln -s $HOME/dotfiles/src/fish/fish_user_key_bindings.fish $HOME/.config/fish/fun
 ln -s $HOME/dotfiles/src/fish/fuck.fish $HOME/.config/fish/functions/fuck.fish
 ln -s $HOME/dotfiles/src/fish/repo.fish $HOME/.config/fish/functions/repo.fish
 ln -s $HOME/dotfiles/src/fish/ghq.fish $HOME/.config/fish/functions/ghq.fish
+ln -s $HOME/dotfiles/src/fish/do_ctrl_g.fish $HOME/.config/fish/functions/do_ctrl_g.fish
 
 # tmux config
 ln -s $HOME/dotfiles/src/tmux/.tmux.conf $HOME/.tmux.conf
