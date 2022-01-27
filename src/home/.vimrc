@@ -129,6 +129,7 @@ if has('unix')
   Plug 'tpope/vim-surround'
   Plug 'Townk/vim-autoclose'
   Plug 'dag/vim-fish'
+  Plug 'sheerun/vim-polyglot'
   " color schenes
   Plug 'sainnhe/sonokai'
   call plug#end()
@@ -144,6 +145,7 @@ elseif has('win32')
   Plug 'tpope/vim-surround'
   Plug 'Townk/vim-autoclose'
   Plug 'dag/vim-fish'
+  Plug 'sheerun/vim-polyglot'
   " color schenes
   Plug 'sainnhe/sonokai'
   call plug#end()
