@@ -14,3 +14,8 @@
 	prompt = false
 [init]
 	defaultBranch = master
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
