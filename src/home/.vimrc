@@ -146,6 +146,7 @@ elseif has('win32')
   Plug 'Townk/vim-autoclose'
   Plug 'dag/vim-fish'
   Plug 'sheerun/vim-polyglot'
+  Plug 'kobar9568/vim-fortios'
   " color schenes
   Plug 'sainnhe/sonokai'
   call plug#end()
