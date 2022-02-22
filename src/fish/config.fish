@@ -31,5 +31,8 @@ fish_vi_key_bindings
 # Remove the greeting.
 set fish_greeting
 
+# Allow nested tmux sessions.
+set --erase TMUX
+
 # Activate starship.
 starship init fish | source
