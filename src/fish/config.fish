@@ -25,6 +25,9 @@ if type "batcat" > /dev/null 2>&1
     alias bat="batcat"
 end
 
+alias :q="exit"
+alias :q!="exit"
+
 # Activate vi mode.
 fish_vi_key_bindings
 

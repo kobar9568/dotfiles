@@ -121,6 +121,8 @@ alias cp='cp -i'
 alias ..='cd ..'
 alias date='date --iso-8601="seconds"'
 alias less='less -MR'
+alias :q='exit'
+alias :q!='exit'
 
 # Environment variables.
 export GOPATH=$HOME/go
