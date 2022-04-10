@@ -131,6 +131,7 @@ if has('unix')
   Plug 'dag/vim-fish'
   Plug 'sheerun/vim-polyglot'
   Plug 'kobar9568/vim-fortios'
+  Plug 'google/vim-searchindex'
   " color schenes
   Plug 'sainnhe/sonokai'
   call plug#end()
@@ -148,6 +149,7 @@ elseif has('win32')
   Plug 'dag/vim-fish'
   Plug 'sheerun/vim-polyglot'
   Plug 'kobar9568/vim-fortios'
+  Plug 'google/vim-searchindex'
   " color schenes
   Plug 'sainnhe/sonokai'
   call plug#end()
