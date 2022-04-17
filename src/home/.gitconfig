@@ -19,3 +19,6 @@
 	conflictstyle = diff3
 [mergetool]
 	prompt = false
+[safe]
+	directory = C:/Scoop/apps/scoop/current
+	directory = C:/Scoop/buckets/main
