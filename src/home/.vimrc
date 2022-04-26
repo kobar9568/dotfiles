@@ -190,6 +190,46 @@ endif
 let g:sonokai_style = 'default'
 colorscheme sonokai
 
+" Set terminal color.
+"
+" The colors normally are:
+"  0   black
+"  1   dark red
+"  2   dark green
+"  3   brown
+"  4   dark blue
+"  5   dark magenta
+"  6   dark cyan
+"  7   light grey
+"  8   dark grey
+"  9   red
+" 10   green
+" 11   yellow
+" 12   blue
+" 13   magenta
+" 14   cyan
+" 15   white
+"
+" Hyper
+let g:terminal_ansi_colors = [
+  \ "#000000",
+  \ "#C51E14",
+  \ "#1DC121",
+  \ "#C7C329",
+  \ "#0A2FC4",
+  \ "#C839C5",
+  \ "#20C5C6",
+  \ "#C7C7C7",
+  \ "#686868",
+  \ "#FD6F6B",
+  \ "#67F86F",
+  \ "#FFFA72",
+  \ "#6A76FB",
+  \ "#FD7CFC",
+  \ "#68FDFE",
+  \ "#FFFFFF"
+  \ ]
+
 " Set Vim-specific sequences for RGB colors
 "
 if has('unix')
