@@ -27,6 +27,7 @@ syntax enable
 set number
 set showcmd
 set title
+let &titlestring = 'Vim'
 set cmdheight=2
 set showtabline=2
 set signcolumn=yes
@@ -150,6 +151,7 @@ elseif has('win32')
   Plug 'sheerun/vim-polyglot'
   Plug 'kobar9568/vim-fortios'
   Plug 'google/vim-searchindex'
+  Plug 'github/copilot.vim'
   " color schenes
   Plug 'sainnhe/sonokai'
   call plug#end()
