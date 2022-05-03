@@ -1,3 +1,77 @@
+format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$buf\
+$c\
+$cmake\
+$cobol\
+$container\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$haskell\
+$helm\
+$java\
+$julia\
+$kotlin\
+$lua\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$rlang\
+$red\
+$ruby\
+$rust\
+$scala\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$nix_shell\
+$conda\
+$spack\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$env_var\
+$crystal\
+$custom\
+$sudo\
+$cmd_duration\
+$time\
+$line_break\
+$jobs\
+$battery\
+$status\
+$shell\
+$character"""
+
 add_newline = false
 
 [character]
@@ -13,6 +87,12 @@ ssh_only = false
 
 [python]
 python_binary = "python3"
+
+[time]
+disabled = false
+format = 'at [$time]($style) '
+style = "purple"
+time_format = "%T"
 
 [username]
 show_always = true
