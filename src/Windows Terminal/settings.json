@@ -39,7 +39,8 @@
             "padding": "0, 0, 0, 0",
             "scrollbarState": "hidden",
             "useAcrylic": false,
-            "acrylicOpacity": 0.5,
+            // "acrylicOpacity": 0.5,
+            "acrylicOpacity": 1,
             "bellStyle": "none"
         },
         "list":
