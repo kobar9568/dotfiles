@@ -85,6 +85,7 @@ inoremap <Down>  <Nop>
 inoremap <Left>  <Nop>
 inoremap <Right> <Nop>
 
+nnoremap <Leader><C-f> :vim  **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 inoremap jj <Esc>
 
 nmap <Leader>d <Plug>AirlineSelectPrevTab
