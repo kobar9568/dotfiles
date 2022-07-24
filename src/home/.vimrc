@@ -80,10 +80,13 @@ noremap  <Up>    <Nop>
 noremap  <Down>  <Nop>
 noremap  <Left>  <Nop>
 noremap  <Right> <Nop>
+noremap  <Del>   <Nop>
+
 inoremap <Up>    <Nop>
 inoremap <Down>  <Nop>
 inoremap <Left>  <Nop>
 inoremap <Right> <Nop>
+inoremap <Del>   <Nop>
 
 nnoremap <Leader><C-f> :vim "" **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 inoremap jj <Esc>
