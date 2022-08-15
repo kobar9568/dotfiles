@@ -183,6 +183,7 @@ function! CheckBackspace() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+" Custmized keybinds for coc.
 nnoremap <C-f> :silent call CocAction('runCommand', 'editor.action.organizeImport')<CR>:call CocAction('format')<CR>
 nnoremap <C-d> :call CocAction('jumpDefinition')<CR>
 
