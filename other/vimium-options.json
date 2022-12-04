@@ -1,5 +1,5 @@
 {
-  "settingsVersion": "1.66",
+  "settingsVersion": "1.67.4",
   "exclusionRules": [
     {
       "pattern": "https://remotedesktop.google.com/*",
@@ -42,15 +42,15 @@
       "passKeys": ""
     },
     {
-      "pattern": "https?://www.e-typing.ne.jp/*",
+      "pattern": "https://www.e-typing.ne.jp/*",
       "passKeys": ""
     },
     {
-      "pattern": "https?://classic.minecraft.net/*",
+      "pattern": "https://classic.minecraft.net/*",
       "passKeys": ""
     },
     {
-      "pattern": "https?://typingx0.net/*",
+      "pattern": "https://typingx0.net/*",
       "passKeys": ""
     },
     {
@@ -59,6 +59,34 @@
     },
     {
       "pattern": "https://esxi.intra.kobar9568.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://fgt2.intra.kobar9568.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://fgt2.intra.kobar9568.com:10443/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://webvm.io/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://ap-northeast-1.console.aws.amazon.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "http://typingx0.net/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://*.device-jp.fortigate.forticloud.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://slowroads.io/*",
       "passKeys": ""
     }
   ],
