@@ -23,4 +23,5 @@
 	directory = C:/Scoop/apps/scoop/current
 	directory = C:/Scoop/buckets/main
 [credential]
-	helper = manager-core # If you have installed Git for Windows with scoop, "git config --system --unset credential.helper" is required.
+	# helper = manager-core # If you have installed Git for Windows with scoop, "git config --system --unset credential.helper" is required.
+	helper = manager # If you have installed Git for Windows with scoop, "git config --system --unset credential.helper" is required.
