@@ -101,7 +101,7 @@ autocmd InsertLeave * set nopaste
 " Set Shell for Windows.
 "
 if has('win32')
-  set shell=PowerShell\ -ExecutionPolicy\ Bypass\ -NoLogo
+  set shell=powershell.exe\ -ExecutionPolicy\ Bypass\ -NoLogo
 endif
 
 " Automatically install vim-plug.
