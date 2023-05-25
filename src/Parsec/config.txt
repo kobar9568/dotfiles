@@ -20,3 +20,4 @@ server_resolution_x = 65535
 server_resolution_y = 65535
 encoder_bitrate = 50
 host_output_1 = 587970-3792097572
+server_admin_mute=0
