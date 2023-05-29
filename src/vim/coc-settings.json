@@ -2,5 +2,16 @@
     "diagnostic.errorSign": ">>",
     "diagnostic.warningSign": ">>",
     "diagnostic.infoSign": ">>",
-    "python.jediEnabled": false
+    "python.jediEnabled": false,
+    "python.linting.mypyEnabled": true,
+    "python.linting.mypyArgs": [
+        "--no-pretty",
+        "--ignore-missing-imports",
+        "--follow-imports=silent",
+        "--show-column-numbers",
+        "--disallow-untyped-calls",
+        "--disallow-untyped-defs",
+        "--disallow-incomplete-defs",
+        "--check-untyped-defs"
+    ]
 }
