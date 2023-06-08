@@ -2,6 +2,7 @@
     "diagnostic.errorSign": ">>",
     "diagnostic.warningSign": ">>",
     "diagnostic.infoSign": ">>",
+    "powershell.integratedConsole.showOnStartup": false,
     "python.jediEnabled": false,
     "python.formatting.provider":"black",
     "python.linting.flake8Enabled": true,
