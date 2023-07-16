@@ -15,7 +15,7 @@
     "telemetry.enableTelemetry": false,
     "git.ignoreMissingGitWarning": true,
     "markdown.preview.fontFamily": "Meiryo",
-    "editor.fontFamily": "'Roboto Mono for Powerline', Meiryo",
+    "editor.fontFamily": "'RobotoMono Nerd Font', Meiryo",
     "editor.cursorStyle": "underline-thin",
     "diffEditor.ignoreTrimWhitespace": true,
     "diffEditor.renderSideBySide": true,

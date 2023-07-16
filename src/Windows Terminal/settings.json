@@ -31,7 +31,7 @@
         "defaults":
         {
             // Put settings here that you want to apply to all profiles.
-            "fontFace": "Roboto Mono for Powerline",
+            "fontFace": "RobotoMono Nerd Font",
             "fontSize": 10,
             "cursorShape": "underscore",
             "colorScheme": "Hyper",
