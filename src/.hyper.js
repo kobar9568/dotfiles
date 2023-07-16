@@ -12,7 +12,7 @@ module.exports = {
     fontSize: 14,
 
     // font family with optional fallbacks
-    fontFamily: 'Consolas, Meiryo',
+    fontFamily: '"RobotoMono Nerd Font", Meiryo',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
