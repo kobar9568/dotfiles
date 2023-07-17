@@ -8,18 +8,20 @@
 # Example:
 # encoder_bitrate = 10
 
-app_channel = release1
+app_channel = release101
 app_flags = 1
 app_run_level = 1
 app_changelog_ver = 8
-client_windowed = 0
 client_immersive = 1
 client_overlay = 0
+client_overlay_warnings = 0
 client_overlay_button_x = 0
 client_overlay_button_y = 29629630
-host_output = 526580-2315383105
+client_decoder_h265 = true
+host_output = 544650-2315383105
 server_resolution_x = 65535
 server_resolution_y = 65535
 encoder_bitrate = 50
+host_full_fps = true
 host_output_1 = 587970-3792097572
 server_admin_mute = 0
