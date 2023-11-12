@@ -28,6 +28,10 @@ end
 alias :q="exit"
 alias :q!="exit"
 
+alias dcu="docker compose up -d"
+alias dcd="docker compose down"
+alias dcl="docker compose logs -f"
+
 # Activate vi mode.
 fish_vi_key_bindings
 
