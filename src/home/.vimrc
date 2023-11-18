@@ -16,6 +16,8 @@ set hidden
 " Define behavior of search.
 "
 set hlsearch
+# TODO: Migrate to <Leader>j
+nnoremap <ESC><ESC> :nohlsearch<CR>
 
 " Define Newline code.
 "
