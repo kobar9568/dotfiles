@@ -267,3 +267,15 @@ endif
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='deus'
+
+" Memo on key bindings for beginner. :)
+"
+" <C-w> | (Pipe)         ... Set width of current window to maximum.
+" <C-w> > (Greater-than) ... Increase width of current window.
+" <C-w> < (Less-than)    ... Decrease width of current window.
+"
+" <C-w> <S-n>            ... Change to normal mode in terminal window.
+"
+" q [Macro name]         ... Start recording macro.
+" q                      ... Stop recording macro.
+" @ [Macro name]         ... Play macro.
