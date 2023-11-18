@@ -206,6 +206,8 @@ endif
 "
 let g:sonokai_style = 'default'
 colorscheme sonokai
+" Workaround for rendering issue in Windows Terminal.
+highlight Comment cterm=NONE
 
 " Set terminal color.
 "
