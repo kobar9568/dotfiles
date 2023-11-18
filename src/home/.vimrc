@@ -13,6 +13,10 @@ set nofixeol
 set autoread
 set hidden
 
+" Define behavior of search.
+"
+set hlsearch
+
 " Define Newline code.
 "
 if has('win32')
