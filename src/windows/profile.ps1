@@ -489,6 +489,10 @@ function ytd() {
     yt-dlp $url > "${vid}.log" ; yt-dlp --list-formats $url > "${vid}_Formats.log"
 }
 
+function Get-COMPorts() {
+    Get-WmiObject -Class Win32_PnPSignedDriver -Filter "FriendlyName LIKE '%(COM%'" | Select-Object -Property FriendlyName;
+}
+
 # プロンプトのカスタマイズ
 function prompt() {
     Write-Host "$([char]27)[1m$env:USERNAME@$env:COMPUTERNAME" -ForegroundColor "Green" -NoNewline
