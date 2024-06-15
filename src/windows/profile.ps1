@@ -493,6 +493,26 @@ function Get-COMPorts() {
     Get-WmiObject -Class Win32_PnPSignedDriver -Filter "FriendlyName LIKE '%(COM%'" | Select-Object -Property FriendlyName;
 }
 
+# https://blog.kurokobo.com/archives/2312
+function Add-Timestamp {
+    [cmdletbinding()]
+    param (
+        [parameter(valuefrompipeline = $true, mandatory = $true)][psobject] $object,
+        [string] $format = "[yyyy-MM-ddTHH:mm:ss.ff] ",
+        [switch] $trim
+    )
+
+    process {
+        $object | foreach-object {
+            if ($trim) {
+                (get-date -f $format) + "$_".trimend()
+            } else {
+                (get-date -f $format) + "$_"
+            }
+        }
+    }
+}
+
 # プロンプトのカスタマイズ
 function prompt() {
     Write-Host "$([char]27)[1m$env:USERNAME@$env:COMPUTERNAME" -ForegroundColor "Green" -NoNewline
