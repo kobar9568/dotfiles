@@ -37,12 +37,19 @@ Param (
             "256000"
         )
     ][int]$Baud = 9600,
+    [
+        ValidateSet (
+            "UTF-8",
+            "Shift-JIS"
+        )
+    ][String]$Lang = "UTF-8",
     [switch]$FlushesConsole
 )
 
 $CloseKey = "[Ctrl + C]"
 
 Write-Host "Open $Port with baud rate $Baud."
+Write-Host "Character code: $Lang"
 Write-Host "Press $CloseKey to close $Port."
 Write-Host "----8<----[ cut here ]----------"
 
@@ -57,7 +64,7 @@ $COMPort.DtrEnable = $true
 $COMPort.RtsEnable = $true
 $COMPort.Handshake = [System.IO.Ports.Handshake]::None
 $COMPort.NewLine = "`r"
-$COMPort.Encoding = [System.Text.Encoding]::GetEncoding("UTF-8")
+$COMPort.Encoding = [System.Text.Encoding]::GetEncoding($Lang)
 
 $d = Register-ObjectEvent -InputObject $COMPort -EventName "DataReceived" `
     -Action {

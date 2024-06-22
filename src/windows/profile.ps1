@@ -136,13 +136,19 @@ function cu() {
                 "256000"
             )
         ][int]$Baud = 9600,
+        [
+            ValidateSet (
+                "UTF-8",
+                "Shift-JIS"
+            )
+        ][String]$Lang = "UTF-8",
         [switch]$FlushesConsole
     )
 
     if ($FlushesConsole) {
-        .$HOME\dotfiles\src\windows\Scripts\Serial.ps1 $Port $Baud -FlushesConsole
+        .$HOME\dotfiles\src\windows\Scripts\Serial.ps1 $Port $Baud $Lang -FlushesConsole
     } else {
-        .$HOME\dotfiles\src\windows\Scripts\Serial.ps1 $Port $Baud
+        .$HOME\dotfiles\src\windows\Scripts\Serial.ps1 $Port $Baud $Lang
     }
 }
 
