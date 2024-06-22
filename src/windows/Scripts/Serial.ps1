@@ -55,12 +55,17 @@ $COMPort.NewLine = "`r"
 $COMPort.Encoding = [System.Text.Encoding]::GetEncoding("UTF-8")
 
 $d = Register-ObjectEvent -InputObject $COMPort -EventName "DataReceived" `
-    -Action { param([System.IO.Ports.SerialPort]$sender, [System.EventArgs]$e) `
-        Write-Host -NoNewline $sender.ReadExisting() }
+    -Action {
+        Param (
+            [System.IO.Ports.SerialPort]$sender, [System.EventArgs]$e
+        )
+        Write-Host -NoNewline $sender.ReadExisting()
+    }
 
 Try {
     $COMPort.Open()
-} Catch {
+}
+Catch {
         Write-Host ""
         Write-Host "----------[ cut here ]----8<----"
     Write-Host "Error: Cannot open $Port."
@@ -73,7 +78,8 @@ Try {
             $COMPort.Write(([Console]::ReadKey($true)).KeyChar)
         }
     }
-} Finally {
+}
+Finally {
     Write-Host ""
     Write-Host "----------[ cut here ]----8<----"
     Write-Host "Closing $Port..."
