@@ -47,13 +47,11 @@ Write-Host "----8<----[ cut here ]----------"
 
 $COMPort = New-Object System.IO.Ports.SerialPort $Port, $Baud, ([System.IO.Ports.Parity]::None)
 
+# Define COM port params.
 $COMPort.DtrEnable = $true
 $COMPort.RtsEnable = $true
-
 $COMPort.Handshake = [System.IO.Ports.Handshake]::None
-
 $COMPort.NewLine = "`r"
-
 $COMPort.Encoding = [System.Text.Encoding]::GetEncoding("UTF-8")
 
 $d = Register-ObjectEvent -InputObject $COMPort -EventName "DataReceived" `
