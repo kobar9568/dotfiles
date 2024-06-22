@@ -43,7 +43,7 @@ $CloseKey = "[Ctrl + C]"
 
 Write-Host "Open $Port with baud rate $Baud."
 Write-Host "Press $CloseKey to close $Port."
-Write-Host ""
+Write-Host "----8<----[ cut here ]----------"
 
 $COMPort = New-Object System.IO.Ports.SerialPort $Port, $Baud, ([System.IO.Ports.Parity]::None)
 
@@ -63,6 +63,8 @@ $d = Register-ObjectEvent -InputObject $COMPort -EventName "DataReceived" `
 Try {
     $COMPort.Open()
 } Catch {
+        Write-Host ""
+        Write-Host "----------[ cut here ]----8<----"
     Write-Host "Error: Cannot open $Port."
     exit
 }
