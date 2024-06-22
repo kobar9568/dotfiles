@@ -1,3 +1,8 @@
+# Serial.ps1
+# Based on:
+# https://qiita.com/yapg57kon/items/58d7f47022b3e405b5f3
+# https://qiita.com/mori-oh/items/9254fde34203fb1db9af
+
 Param (
     [
         ValidateSet (
