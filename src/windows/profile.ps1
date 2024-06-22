@@ -97,7 +97,46 @@ function cdg() {
 
 # cuコマンド
 function cu() {
-    Param([ValidateSet("COM1", "COM2", "COM3", "COM4", "COM5", "COM6", "COM7", "COM8", "COM9", "COM10", "COM11", "COM12", "COM13", "COM14", "COM15", "COM16")][String]$Port = "COM3", [ValidateSet("110", "300", "600", "1200", "2400", "4800", "9600", "14400", "19200", "38400", "57600", "115200", "128000", "256000")][int]$Baud = 9600)
+    Param (
+        [
+            ValidateSet (
+                "COM1",
+                "COM2",
+                "COM3",
+                "COM4",
+                "COM5",
+                "COM6",
+                "COM7",
+                "COM8",
+                "COM9",
+                "COM10",
+                "COM11",
+                "COM12",
+                "COM13",
+                "COM14",
+                "COM15",
+                "COM16"
+            )
+        ][String]$Port = "COM3",
+        [
+            ValidateSet (
+                "110",
+                "300",
+                "600",
+                "1200",
+                "2400",
+                "4800",
+                "9600",
+                "14400",
+                "19200",
+                "38400",
+                "57600",
+                "115200",
+                "128000",
+                "256000"
+            )
+        ][int]$Baud = 9600
+    )
     .$HOME\dotfiles\src\windows\Scripts\Serial.ps1 $Port $Baud
 }
 
