@@ -489,6 +489,7 @@ function ytd() {
     yt-dlp $url > "${vid}.log" ; yt-dlp --list-formats $url > "${vid}_Formats.log"
 }
 
+# List COM Ports.
 function Get-COMPorts() {
     Get-WmiObject -Class Win32_PnPSignedDriver -Filter "FriendlyName LIKE '%(COM%'" | Select-Object -Property FriendlyName;
 }
