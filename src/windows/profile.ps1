@@ -493,6 +493,7 @@ function ytd() {
 function Get-COMPorts() {
     Get-WmiObject -Class Win32_PnPSignedDriver -Filter "FriendlyName LIKE '%(COM%'" | Select-Object -Property FriendlyName;
 }
+Set-Alias coms Get-COMPorts
 
 # https://blog.kurokobo.com/archives/2312
 function Add-Timestamp {
