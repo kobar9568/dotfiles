@@ -36,7 +36,8 @@ Param (
             "128000",
             "256000"
         )
-    ][int]$Baud = 9600
+    ][int]$Baud = 9600,
+    [switch]$FlushesConsole
 )
 
 $CloseKey = "[Ctrl + C]"
@@ -44,6 +45,10 @@ $CloseKey = "[Ctrl + C]"
 Write-Host "Open $Port with baud rate $Baud."
 Write-Host "Press $CloseKey to close $Port."
 Write-Host "----8<----[ cut here ]----------"
+
+if ($FlushesConsole) {
+    clear
+}
 
 $COMPort = New-Object System.IO.Ports.SerialPort $Port, $Baud, ([System.IO.Ports.Parity]::None)
 
@@ -66,8 +71,10 @@ Try {
     $COMPort.Open()
 }
 Catch {
+    if (!$FlushesConsole) {
         Write-Host ""
         Write-Host "----------[ cut here ]----8<----"
+    }
     Write-Host "Error: Cannot open $Port."
     exit
 }
@@ -80,9 +87,11 @@ Try {
     }
 }
 Finally {
-    Write-Host ""
-    Write-Host "----------[ cut here ]----8<----"
-    Write-Host "Closing $Port..."
+    if (!$FlushesConsole) {
+        Write-Host ""
+        Write-Host "----------[ cut here ]----8<----"
+        Write-Host "Closing $Port..."
+    }
     $COMPort.Close()
     Unregister-Event $d.Name
     Remove-Job $d.id

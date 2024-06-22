@@ -135,9 +135,15 @@ function cu() {
                 "128000",
                 "256000"
             )
-        ][int]$Baud = 9600
+        ][int]$Baud = 9600,
+        [switch]$FlushesConsole
     )
-    .$HOME\dotfiles\src\windows\Scripts\Serial.ps1 $Port $Baud
+
+    if ($FlushesConsole) {
+        .$HOME\dotfiles\src\windows\Scripts\Serial.ps1 $Port $Baud -FlushesConsole
+    } else {
+        .$HOME\dotfiles\src\windows\Scripts\Serial.ps1 $Port $Baud
+    }
 }
 
 # unameコマンド
