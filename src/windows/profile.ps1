@@ -514,6 +514,7 @@ function Add-Timestamp {
         }
     }
 }
+Set-Alias ts Add-Timestamp
 
 # プロンプトのカスタマイズ
 function prompt() {
