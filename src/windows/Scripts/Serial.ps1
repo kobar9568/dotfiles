@@ -75,7 +75,7 @@ Try {
     }
 } Finally {
     Write-Host ""
-   Write-Host "----------[ cut here ]----8<----"
+    Write-Host "----------[ cut here ]----8<----"
     Write-Host "Closing $Port..."
     $COMPort.Close()
     Unregister-Event $d.Name
