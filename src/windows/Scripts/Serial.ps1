@@ -46,8 +46,34 @@ Param (
     [switch]$FlushesConsole
 )
 
-$CloseKey = "[Ctrl + C]"
+[char]$ETX = 0x03
+[char]$LF  = 0x09
+[char]$CR  = 0x0a
+[char]$NAK = 0x15
+[char]$ESC = 0x1b
+[char]$DEL = 0x7F
 
+function InputKeyParser([System.ConsoleKeyInfo]$key) {
+    if ($key.Modifiers -eq 'Ctrl' -and $key.Key -eq 'C') {
+        $return = $ETX
+    }
+    elseif ($key.Key -eq 'UpArrow')    { $return = "${ESC}[A" }
+    elseif ($key.Key -eq 'DownArrow')  { $return = "${ESC}[B" }
+    elseif ($key.Key -eq 'RightArrow') { $return = "${ESC}[C" }
+    elseif ($key.Key -eq 'LeftArrow')  { $return = "${ESC}[D" }
+    elseif ($key.Key -eq 'Home')       { $return = "${ESC}[H" }
+    elseif ($key.Key -eq 'End')        { $return = "${ESC}[F" }
+    elseif ($key.Key -eq 'Insert')     { $return = "${ESC}[2~" }
+    elseif ($key.Key -eq 'Delete')     { $return = "${ESC}[3~" }
+    elseif ($key.Key -eq 'PageUp')     { $return = "${ESC}[5~" }
+    elseif ($key.Key -eq 'PageDown')   { $return = "${ESC}[6~" }
+    else {
+        $return = $key.KeyChar
+    }
+    return $return
+}
+
+$CloseKey = "[Ctrl + Alt + C]"
 Write-Host "Open $Port with baud rate $Baud."
 Write-Host "Character code: $Lang"
 Write-Host "Press $CloseKey to close $Port."
@@ -65,6 +91,9 @@ $COMPort.RtsEnable = $true
 $COMPort.Handshake = [System.IO.Ports.Handshake]::None
 $COMPort.NewLine = "`r"
 $COMPort.Encoding = [System.Text.Encoding]::GetEncoding($Lang)
+
+# Disable Ctrl + C
+[Console]::TreatControlCAsInput = $true
 
 $d = Register-ObjectEvent -InputObject $COMPort -EventName "DataReceived" `
     -Action {
@@ -89,7 +118,12 @@ Catch {
 Try {
     while ($true) {
         if ([Console]::KeyAvailable) {
-            $COMPort.Write(([Console]::ReadKey($true)).KeyChar)
+            $keyInput = [Console]::ReadKey($true)
+            if ($keyInput.Modifiers -eq "Alt, Control" -and $keyInput.Key -eq "C") {
+                break
+            }
+            $sendChar = InputKeyParser($keyInput)
+            $COMPort.Write($sendChar)
         }
     }
 }
