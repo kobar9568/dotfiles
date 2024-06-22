@@ -52,6 +52,11 @@ function history() {
     (Get-Content -Encoding UTF8 (Get-PSReadlineOption).HistorySavePath)[(Get-Content -Encoding UTF8 (Get-PSReadlineOption).HistorySavePath).length..0] | less
 }
 
+# chmod Readonly
+function chmod() {
+    Set-ItemProperty $args[0] -Name IsReadOnly -Value $true
+}
+
 # エイリアス
 function ..() {Set-Location ../}
 
