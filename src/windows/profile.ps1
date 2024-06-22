@@ -595,3 +595,11 @@ if ($Env:SSH_CONNECTION) {
 # Activate Starship.
 $ENV:STARSHIP_CONFIG = "$HOME\dotfiles\src\starship\starship.toml"
 Invoke-Expression (&starship init powershell)
+
+# Start Logging
+$LogFolder   = "$HOME\Documents\Windows Terminal\Logs"
+$TimeStamp   = (Get-Date -Format "yyyy-MM-ddTHHmmss+0900")
+$UserInfo    = $Env:COMPUTERNAME + '-' + $Env:USERNAME
+$LogFilePath = $LogFolder + "\" + $TimeStamp + "_" + $UserInfo + ".log"
+
+Start-Transcript -Path $LogFilePath -Append
