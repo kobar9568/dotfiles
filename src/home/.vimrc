@@ -101,6 +101,10 @@ nmap <Leader>d <Plug>AirlineSelectPrevTab
 nmap <Leader>f <Plug>AirlineSelectNextTab
 nnoremap <Leader>x :bp<bar>sp<bar>bn<bar>bd<CR>
 
+" Accept suggestions when pressing Alt + L in terminal mode.
+" Workaround for a keycode problem.
+tnoremap <M-l> <Right>
+
 " Turn off paste mode when leaving INSERT mode.
 autocmd InsertLeave * set nopaste
 
@@ -162,6 +166,12 @@ elseif has('win32')
   Plug 'kobar9568/vim-fortios'
   Plug 'google/vim-searchindex'
   Plug 'github/copilot.vim'
+  Plug 'vim-denops/denops.vim'
+  Plug 'vim-denops/denops-helloworld.vim'
+  Plug 'skanehira/denops-twihi.vim'
+  Plug 'jceb/vim-orgmode'
+  Plug 'vim-scripts/lrc.vim'
+  "Plug 'cohama/vim-insert-linenr'
   " color schenes
   Plug 'sainnhe/sonokai'
   call plug#end()
