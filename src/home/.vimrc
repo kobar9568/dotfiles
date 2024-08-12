@@ -18,6 +18,8 @@ set hidden
 set hlsearch
 " TODO: Migrate to <Leader>j
 nnoremap <ESC><ESC> :nohlsearch<CR>
+" Alt + J to nohlsearch.
+nnoremap <M-j> :nohlsearch<CR>
 
 " Define Newline code.
 "
