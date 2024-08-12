@@ -600,6 +600,9 @@ Set-PSReadLineKeyHandler -Chord 'j' -ScriptBlock {
 # Workaround for Shift + Backspace issue.
 Set-PSReadLineKeyHandler -Chord 'Shift+BackSpace' -Function BackwardDeleteChar
 
+# Alt + L to accept suggestion.
+Set-PSReadLineKeyHandler -Key 'Alt+l' -Function AcceptSuggestion
+
 # Ctrl + G to open the ghq repository list.
 Set-PSReadLineKeyHandler -Chord 'Ctrl+g' -ScriptBlock {
     Write-Host "^G"
