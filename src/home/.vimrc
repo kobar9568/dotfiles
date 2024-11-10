@@ -197,6 +197,10 @@ inoremap <silent><expr> <C-j>
       \ coc#refresh()
 inoremap <silent><expr> <C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
+" Make Ctrl + L to accept selected completion.
+inoremap <silent><expr> <C-l> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
