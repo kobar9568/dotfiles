@@ -600,6 +600,10 @@ Set-PSReadLineKeyHandler -Chord 'j' -ScriptBlock {
 # Workaround for Shift + Backspace issue.
 Set-PSReadLineKeyHandler -Chord 'Shift+BackSpace' -Function BackwardDeleteChar
 
+# Alt + J to move down completion list
+Set-PSReadLineKeyHandler -Key 'Alt+j' -Function NextSuggestion
+# Alt + K to move up completion list
+Set-PSReadLineKeyHandler -Key 'Alt+k' -Function PreviousSuggestion
 # Alt + L to accept suggestion.
 Set-PSReadLineKeyHandler -Key 'Alt+l' -Function AcceptSuggestion
 
