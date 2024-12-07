@@ -9,6 +9,8 @@ New-Item -Value "$PSScriptRoot\src\home\.nanorc" -Path "~\" -Name ".nanorc" -Ite
 # PowerShell config
 New-Item "~\Documents\WindowsPowerShell" -ItemType Directory
 New-Item -Value "$PSScriptRoot\src\windows\profile.ps1" -Path "~\Documents\WindowsPowerShell" -Name "profile.ps1" -ItemType SymbolicLink
+# For pwsh.exe
+New-Item -Value "$Env:USERPROFILE\Documents\WindowsPowerShell\" -Path "~\Documents\" -Name "PowerShell\" -ItemType SymbolicLink
 
 # SSH config
 New-Item "~\.ssh\" -ItemType Directory # The folder has already been created in the process of cloning this script.
