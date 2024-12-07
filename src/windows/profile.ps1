@@ -659,6 +659,12 @@ if ($Env:SSH_CONNECTION) {
 $ENV:STARSHIP_CONFIG = "$HOME\dotfiles\src\starship\starship.toml"
 Invoke-Expression (&starship init powershell)
 
+# Activate CompletionPredictor.
+# https://www.powershellgallery.com/packages/CompletionPredictor
+if ($PSVersionTable.PSVersion -ge [Version]"7.2") {
+    Import-Module CompletionPredictor
+}
+
 # Start Logging
 $LogFolder   = "$HOME\Documents\Windows Terminal\Logs"
 $TimeStamp   = (Get-Date -Format "yyyy-MM-ddTHHmmss+0900")
