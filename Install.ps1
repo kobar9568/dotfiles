@@ -108,7 +108,7 @@ if (![System.Environment]::GetEnvironmentVariable("Path", "Machine").Contains("C
 
 # Add yarn global add PATH.
 $SystemPath = [Environment]::GetEnvironmentVariable("Path", "Machine")
-$SystemPath += ";" + (yarn global bin) + "\"
+$SystemPath += ";" + (yarn global bin) + "\" # TODO: If the yarn is not installed, it will fail.
 [Environment]::SetEnvironmentVariable('Path', $SystemPath, 'Machine')
 
 # Install bat command.
