@@ -106,6 +106,11 @@ if (![System.Environment]::GetEnvironmentVariable("Path", "Machine").Contains("C
     dism /Online /Remove-Capability /CapabilityName:OpenSSH.Client~~~~0.0.1.0
 }
 
+# Add yarn global add PATH.
+$SystemPath = [Environment]::GetEnvironmentVariable("Path", "Machine")
+$SystemPath += ";" + (yarn global bin) + "\"
+[Environment]::SetEnvironmentVariable('Path', $SystemPath, 'Machine')
+
 # Install bat command.
 if (![System.Environment]::GetEnvironmentVariable("Path", "Machine").Contains("C:\Portable Program\bat-v0.17.1-x86_64-pc-windows-msvc")) {
     Invoke-WebRequest "https://github.com/sharkdp/bat/releases/download/v0.17.1/bat-v0.17.1-x86_64-pc-windows-msvc.zip" -OutFile "$HOME\Downloads\bat-v0.17.1-x86_64-pc-windows-msvc.zip"
