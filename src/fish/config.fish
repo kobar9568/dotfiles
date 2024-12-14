@@ -40,6 +40,8 @@ set fish_greeting
 
 # Allow nested tmux sessions.
 set --erase TMUX
+
+# Cursor configs.
 set fish_cursor_default underscore blink
 set fish_cursor_insert underscore blink
 set fish_cursor_default underscore blink
