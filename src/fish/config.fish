@@ -40,6 +40,9 @@ set fish_greeting
 
 # Allow nested tmux sessions.
 set --erase TMUX
+set fish_cursor_default underscore blink
+set fish_cursor_insert underscore blink
+set fish_cursor_default underscore blink
 
 # Activate starship.
 starship init fish | source
