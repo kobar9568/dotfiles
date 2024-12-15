@@ -96,6 +96,12 @@ inoremap <Left>  <Nop>
 inoremap <Right> <Nop>
 inoremap <Del>   <Nop>
 
+cnoremap <Up>    <Nop>
+cnoremap <Down>  <Nop>
+cnoremap <Left>  <Nop>
+cnoremap <Right> <Nop>
+cnoremap <Del>   <Nop>
+
 nnoremap <Leader><C-f> :vim "" **/* \| cw<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 inoremap jj <Esc>
 
