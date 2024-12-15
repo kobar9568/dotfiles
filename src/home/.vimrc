@@ -103,6 +103,18 @@ nmap <Leader>d <Plug>AirlineSelectPrevTab
 nmap <Leader>f <Plug>AirlineSelectNextTab
 nnoremap <Leader>x :bp<bar>sp<bar>bn<bar>bd<CR>
 
+" Alt+K to enter command mode history.
+nnoremap <M-k> :<Up>
+" Use HJKL in command mode.
+cnoremap <M-h> <Left>
+cnoremap <M-j> <Down>
+cnoremap <M-k> <Up>
+cnoremap <M-l> <Right>
+" Use X to delete in command mode.
+cnoremap <M-x> <Del>
+" Use jj to enter command window.
+cnoremap jj <C-f>
+
 " Accept suggestions when pressing Alt + L in terminal mode.
 " Workaround for a keycode problem.
 tnoremap <M-l> <Right>
