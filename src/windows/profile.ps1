@@ -83,6 +83,7 @@ function :q() {exit}
 function :q!() {exit}
 function tac() {(Get-Content -Encoding UTF8 $Args)[(Get-Content -Encoding UTF8 $Args).length..0]}
 function diskpart() {sudo diskpart}
+function vims() {vim -S}
 Set-Alias htop ntop
 Set-Alias traceroute tracert
 
