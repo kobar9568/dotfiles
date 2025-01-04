@@ -128,6 +128,10 @@ tnoremap <M-l> <Right>
 " Turn off paste mode when leaving INSERT mode.
 autocmd InsertLeave * set nopaste
 
+" Autosave session when leaving the Vim.
+autocmd VimLeave * mks!
+" autocmd VimLeave * mks! ~/Session.vim
+
 " Set Shell for Windows.
 "
 if has('win32')
