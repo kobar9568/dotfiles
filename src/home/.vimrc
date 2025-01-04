@@ -232,8 +232,6 @@ endfunction
 nnoremap <C-f> :silent call CocAction('runCommand', 'editor.action.organizeImport')<CR>:call CocAction('format')<CR>
 nnoremap <C-d> :call CocAction('jumpDefinition')<CR>
 
-imap <Tab> <C-R>=snipMate#TriggerSnippet(1)<CR>
-
 " Trigger isort on save. (Maybe duplicating with black.)
 autocmd BufWritePre *.py silent! :call CocAction('runCommand', 'python.sortImports')
 
