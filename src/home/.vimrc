@@ -251,6 +251,7 @@ function ROT13(plaintext)
   endfor
   return ciphertext
 endfunction
+command -narg=1 ROT13 echomsg ROT13('<args>')
 
 " Enable true color.
 "
