@@ -325,6 +325,14 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='deus'
 
+" Snippets for command mode.
+" For VR
+" /id (Yank Broadcast ID.)
+execute ROT13('paberznc vq [0-9N-Sn-s]\{32}<Ragre>')
+" :vr (Prepare to replace {Broadcast ID} to ID.)
+execute ROT13('paberznc <fvyrag> ie %f/uggcf://ibq-fgernz.aux.wc/enqvbbaqrznaq/e/6A87YWY8MZ/f/fgernz_6A87YWY8MZ_/vaqrk_/uggcf:\/\/ibq-fgernz\.aux\.wc\/enqvbbaqrznaq\/e\/6A87YWY8MZ\/f\/fgernz_6A87YWY8MZ_{Oebnqpnfg VQ}\/vaqrk_<Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Yrsg><P-s>:frgs grkg<Ragre>')
+" Usage: /id -> ygn -> :vr -> p -> Enter
+
 " Memo on key bindings for beginner. :)
 "
 " <C-w> | (Pipe)         ... Set width of current window to maximum.
