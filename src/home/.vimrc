@@ -232,8 +232,27 @@ endfunction
 nnoremap <C-f> :silent call CocAction('runCommand', 'editor.action.organizeImport')<CR>:call CocAction('format')<CR>
 nnoremap <C-d> :call CocAction('jumpDefinition')<CR>
 
+imap <Tab> <C-R>=snipMate#TriggerSnippet(1)<CR>
+
 " Trigger isort on save. (Maybe duplicating with black.)
 autocmd BufWritePre *.py silent! :call CocAction('runCommand', 'python.sortImports')
+
+" ROT13 function
+"
+function ROT13(plaintext)
+  let ciphertext = ''
+  for i in range(len(a:plaintext))
+    let ascii = char2nr(a:plaintext[i])
+    if ascii >= 65 && ascii <= 77 || ascii >= 97 && ascii <= 109
+      let ciphertext .= nr2char(ascii + 13)
+    elseif ascii >= 78 && ascii <= 90 || ascii >= 110 && ascii <= 122
+      let ciphertext .= nr2char(ascii - 13)
+    else
+      let ciphertext .= nr2char(ascii)
+    endif
+  endfor
+  return ciphertext
+endfunction
 
 " Enable true color.
 "
