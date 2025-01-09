@@ -129,8 +129,7 @@ tnoremap <M-l> <Right>
 autocmd InsertLeave * set nopaste
 
 " Autosave session when leaving the Vim.
-autocmd VimLeave * mks!
-" autocmd VimLeave * mks! ~/Session.vim
+autocmd VimLeave * mks! ~/Session.vim
 
 " Set Shell for Windows.
 "
