@@ -190,6 +190,7 @@ elseif has('win32')
   Plug 'google/vim-searchindex'
   Plug 'github/copilot.vim'
   Plug 'retorillo/md5.vim'
+  Plug 's3rvac/vim-syntax-yara'
   " color schenes
   Plug 'sainnhe/sonokai'
   call plug#end()
