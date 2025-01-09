@@ -68,6 +68,12 @@ New-Item -Value "$PSScriptRoot\src\TVTest\BonDriver_Mirakurun.ini" -Path "C:\Por
 # Update PSReadLine
 Install-Module -Name PSReadLine -Force # TODO: Handle repository trust warnings
 
+# Install CompletionPredictor
+Install-Module -Name CompletionPredictor -Force # TODO: Handle repository trust warnings
+
+# Install pwsh
+winget install --id Microsoft.PowerShell --source winget # TODO: Handle repository EULA?
+
 # Setup Scoop command.
 # The Scoop command basically runs with user privileges, but here we will use it as a system-wide package manager.
 #
@@ -120,3 +126,5 @@ if (![System.Environment]::GetEnvironmentVariable("Path", "Machine").Contains("C
     $oldSystemPath += ";C:\Portable Program\bat-v0.17.1-x86_64-pc-windows-msvc"
     [System.Environment]::SetEnvironmentVariable("Path", $oldSystemPath, "Machine")
 }
+
+# TODO: gpedit: Create symlink, Windows Update BitLocker etc.
