@@ -441,7 +441,7 @@ function conap() {
         $key = $args[1]
         netsh wlan connect ssid=$ssid key=$key
     } else {
-        Write-Host "usage: conap`r`n   conap <SSID or ESSID>                 : Connect to a known (E)SSID.`r`n   conap <SSID or ESSID> <Pre-shared key>: Connect to a (E)SSID.`r`n   conap status                          : Show current Wi-Fi connectivity."
+        Write-Host "usage: conap`r`n   conap <SSID or ESSID>                  : Connect to a known (E)SSID.`r`n   conap <SSID or ESSID> <Pre-shared key> : Connect to a (E)SSID.`r`n   conap status                           : Show current Wi-Fi connectivity."
     }
 }
 
