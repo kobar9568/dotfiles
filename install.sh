@@ -43,6 +43,12 @@ ln -s $HOME/dotfiles/src/fish/repo.fish $HOME/.config/fish/functions/repo.fish
 ln -s $HOME/dotfiles/src/fish/ghq.fish $HOME/.config/fish/functions/ghq.fish
 ln -s $HOME/dotfiles/src/fish/do_ctrl_g.fish $HOME/.config/fish/functions/do_ctrl_g.fish
 
+# fisher config (https://github.com/jorgebucaran/fisher?tab=readme-ov-file#installation)
+# TODO: Not tested.
+if ! type "fish" > /dev/null 2>&1; then
+  fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
+fi
+
 # tmux config
 ln -s $HOME/dotfiles/src/tmux/.tmux.conf $HOME/.tmux.conf
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
