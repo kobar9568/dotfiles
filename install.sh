@@ -49,6 +49,26 @@ if ! type "fish" > /dev/null 2>&1; then
   fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
 fi
 
+# nvm config
+# For bash
+# TODO
+# For fish (https://github.com/jorgebucaran/nvm.fish?tab=readme-ov-file#installation)
+if ! type "fish" > /dev/null 2>&1; then
+  if [ -f "$HOME/.config/fish/functions/fisher.fish" ]; then
+    fish -c "fisher install jorgebucaran/nvm.fish"
+  fi
+fi
+# Install Node.js for bash
+# TODO
+# Install Node.js for fish
+if ! type "fish" > /dev/null 2>&1; then
+  if [ -f "$HOME/.config/fish/functions/nvm.fish" ]; then
+    fish -c "nvm install lts"
+    fish -c "nvm install latest"
+    fish -c "nvm use lts"
+  fi
+fi
+
 # tmux config
 ln -s $HOME/dotfiles/src/tmux/.tmux.conf $HOME/.tmux.conf
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
