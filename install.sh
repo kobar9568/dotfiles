@@ -111,6 +111,28 @@ ln -s $HOME/dotfiles/src/powerline/colorschemes/tmux/deus.json $HOME/.config/pow
 # vim config
 mkdir -p $HOME/.vim/
 ln -s $HOME/dotfiles/src/vim/coc-settings.json $HOME/.vim/coc-settings.json
+# TODO: Install coc plugins from shell.
+# vim -c \
+#   'CocInstall coc-sh' -c \
+#   'CocInstall coc-fish' -c \
+#   'CocInstall coc-powershell' -c \
+#   'CocInstall coc-xml' -c \
+#   'CocInstall coc-json' -c \
+#   'CocInstall coc-yaml' -c \
+#   'CocInstall coc-markdownlint' -c \
+#   'CocInstall coc-pyright' -c \
+#   'CocInstall coc-lua' -c \
+#   'CocInstall coc-rust-analyzer' -c \
+#   'CocInstall coc-eslint' -c \
+#   'CocInstall coc-prettier' -c \
+#   'CocInstall coc-tsserver' -c \
+#   'CocInstall coc-ccls' -c \
+#   'CocInstall coc-omnisharp' -c \
+#   'CocInstall coc-java' -c \
+#   'CocInstall coc-go' -c \
+#   'CocInstall coc-html' -c \
+#   'CocInstall coc-css' -c \
+#   'CocInstall coc-sql' -c \
 
 # Golang config
 mkdir -p $HOME/go/bin/
