@@ -69,6 +69,20 @@ if ! type "fish" > /dev/null 2>&1; then
   fi
 fi
 
+# Node.js config
+# For bash
+# TODO
+# For fish
+if ! type "fish" > /dev/null 2>&1; then
+  if [ -f "$HOME/.config/fish/functions/nvm.fish" ]; then
+    fish -c "nvm use lts"
+    fish -c "npm install -g npm corepack"
+    fish -c "nvm use latest"
+    fish -c "npm install -g npm corepack"
+    fish -c "nvm use lts"
+  fi
+fi
+
 # tmux config
 ln -s $HOME/dotfiles/src/tmux/.tmux.conf $HOME/.tmux.conf
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
