@@ -144,6 +144,11 @@ fi
 # Allow nested tmux sessions.
 unset TMUX
 
+# PATH to nvm. (Added by nvm-sh/nvm install.sh)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # Exec fish. (keep this line at the very bottom of .bashrc)
 if type "fish" > /dev/null 2>&1; then
     exec fish
