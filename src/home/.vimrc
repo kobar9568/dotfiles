@@ -331,7 +331,7 @@ let g:airline_theme='deus'
 " /id (Yank Broadcast ID.)
 execute ROT13('paberznc vq [0-9N-Sn-s]\{32}<Ragre>')
 " :vr (Prepare to replace {Broadcast ID} to ID.)
-execute ROT13('paberznc <fvyrag> ie %f/uggcf://ibq-fgernz.aux.wc/enqvbbaqrznaq/e/6A87YWY8MZ/f/fgernz_6A87YWY8MZ_/vaqrk_/uggcf:\/\/ibq-fgernz\.aux\.wc\/enqvbbaqrznaq\/e\/6A87YWY8MZ\/f\/fgernz_6A87YWY8MZ_{Oebnqpnfg VQ}\/vaqrk_<Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Yrsg><P-s>:frgs grkg<Ragre>')
+execute ROT13('paberznc <fvyrag> ie %f/vaqrk_/uggcf:\/\/ibq-fgernz\.aux\.wc\/enqvbbaqrznaq\/e\/6A87YWY8MZ\/f\/fgernz_6A87YWY8MZ_{Oebnqpnfg VQ}\/vaqrk_<Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Yrsg><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Qry><Yrsg><P-s>:frgs grkg<Ragre>')
 " Usage: /id -> ygn -> :vr -> p -> Enter
 
 " Memo on key bindings for beginner. :)
