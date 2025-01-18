@@ -2,7 +2,9 @@
 $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
 
 # 空cdでホームに
-Remove-Item Alias:cd -Force
+if (Get-Alias "cd" -ErrorAction SilentlyContinue) {
+    Remove-Item Alias:cd -Force
+}
 function cd() {
     if ($Args.Length -eq 0) {
         Set-Location $HOME
@@ -12,7 +14,9 @@ function cd() {
 }
 
 # Linux風rm
-Remove-Item Alias:rm -Force
+if (Get-Alias "rm" -ErrorAction SilentlyContinue) {
+    Remove-Item Alias:rm -Force
+}
 function rm() {
     if ($Args.Length -eq 0) {
         # 空打ち時
@@ -33,21 +37,33 @@ function rm() {
 }
 
 # Where-Objectへのエイリアスを削除し、where.exeが上がるようにする
-Remove-Item Alias:where -Force
+if (Get-Alias "where" -ErrorAction SilentlyContinue) {
+    Remove-Item Alias:where -Force
+}
 
 # Invoke-WebRequestへのエイリアスを削除。
-Remove-Item alias:curl
-Remove-Item alias:wget
+if (Get-Alias "curl" -ErrorAction SilentlyContinue) {
+    Remove-Item alias:curl
+}
+if (Get-Alias "wget" -ErrorAction SilentlyContinue) {
+    Remove-Item alias:wget
+}
 
 # Compare-Objectへのエイリアスを削除し、scoopで入れたdiff.exeが上がるようにする
-Remove-Item Alias:diff -Force
+if (Get-Alias "diff" -ErrorAction SilentlyContinue) {
+    Remove-Item Alias:diff -Force
+}
 
 # 基本的にUTF-8しか使わない
-Remove-Item Alias:cat -Force
+if (Get-Alias "cat" -ErrorAction SilentlyContinue) {
+    Remove-Item Alias:cat -Force
+}
 function cat() {Get-Content -Encoding UTF8 $Args}
 
 # セッション単位ではないhistory
-Remove-Item Alias:history -Force
+if (Get-Alias "histroy" -ErrorAction SilentlyContinue) {
+    Remove-Item Alias:history -Force
+}
 function history() {
     (Get-Content -Encoding UTF8 (Get-PSReadlineOption).HistorySavePath)[(Get-Content -Encoding UTF8 (Get-PSReadlineOption).HistorySavePath).length..0] | less
 }
