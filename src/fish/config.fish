@@ -46,5 +46,8 @@ set fish_cursor_default underscore blink
 set fish_cursor_insert underscore blink
 set fish_cursor_default underscore blink
 
+# Default node version by nvm.
+set --universal nvm_default_version lts
+
 # Activate starship.
 starship init fish | source

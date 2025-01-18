@@ -10,6 +10,11 @@
 - cloneしたら、`~/.gitconfig`は削除しておく
 - もしくは、cloneしてインストール後に`$ git checkout .`を実行し、自動変換された改行コードを元に戻すこと
 
+### CA証明書のインストール
+
+- Ubuntuの場合、`/usr/local/share/ca-certificates/`配下に設置する
+  - ただし、ChromeやFirefoxは独自の証明書ストアを利用する
+
 ## Installation (Linux)
 
 ```

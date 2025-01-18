@@ -43,6 +43,46 @@ ln -s $HOME/dotfiles/src/fish/repo.fish $HOME/.config/fish/functions/repo.fish
 ln -s $HOME/dotfiles/src/fish/ghq.fish $HOME/.config/fish/functions/ghq.fish
 ln -s $HOME/dotfiles/src/fish/do_ctrl_g.fish $HOME/.config/fish/functions/do_ctrl_g.fish
 
+# fisher config (https://github.com/jorgebucaran/fisher?tab=readme-ov-file#installation)
+# TODO: Not tested.
+if ! type "fish" > /dev/null 2>&1; then
+  fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
+fi
+
+# nvm config
+# For bash
+# TODO
+# For fish (https://github.com/jorgebucaran/nvm.fish?tab=readme-ov-file#installation)
+if ! type "fish" > /dev/null 2>&1; then
+  if [ -f "$HOME/.config/fish/functions/fisher.fish" ]; then
+    fish -c "fisher install jorgebucaran/nvm.fish"
+  fi
+fi
+# Install Node.js for bash
+# TODO
+# Install Node.js for fish
+if ! type "fish" > /dev/null 2>&1; then
+  if [ -f "$HOME/.config/fish/functions/nvm.fish" ]; then
+    fish -c "nvm install lts"
+    fish -c "nvm install latest"
+    fish -c "nvm use lts"
+  fi
+fi
+
+# Node.js config
+# For bash
+# TODO
+# For fish
+if ! type "fish" > /dev/null 2>&1; then
+  if [ -f "$HOME/.config/fish/functions/nvm.fish" ]; then
+    fish -c "nvm use lts"
+    fish -c "npm install -g npm corepack"
+    fish -c "nvm use latest"
+    fish -c "npm install -g npm corepack"
+    fish -c "nvm use lts"
+  fi
+fi
+
 # tmux config
 ln -s $HOME/dotfiles/src/tmux/.tmux.conf $HOME/.tmux.conf
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
@@ -71,6 +111,28 @@ ln -s $HOME/dotfiles/src/powerline/colorschemes/tmux/deus.json $HOME/.config/pow
 # vim config
 mkdir -p $HOME/.vim/
 ln -s $HOME/dotfiles/src/vim/coc-settings.json $HOME/.vim/coc-settings.json
+# TODO: Install coc plugins from shell.
+# vim -c \
+#   'CocInstall coc-sh' -c \
+#   'CocInstall coc-fish' -c \
+#   'CocInstall coc-powershell' -c \
+#   'CocInstall coc-xml' -c \
+#   'CocInstall coc-json' -c \
+#   'CocInstall coc-yaml' -c \
+#   'CocInstall coc-markdownlint' -c \
+#   'CocInstall coc-pyright' -c \
+#   'CocInstall coc-lua' -c \
+#   'CocInstall coc-rust-analyzer' -c \
+#   'CocInstall coc-eslint' -c \
+#   'CocInstall coc-prettier' -c \
+#   'CocInstall coc-tsserver' -c \
+#   'CocInstall coc-ccls' -c \
+#   'CocInstall coc-omnisharp' -c \
+#   'CocInstall coc-java' -c \
+#   'CocInstall coc-go' -c \
+#   'CocInstall coc-html' -c \
+#   'CocInstall coc-css' -c \
+#   'CocInstall coc-sql' -c \
 
 # Golang config
 mkdir -p $HOME/go/bin/
