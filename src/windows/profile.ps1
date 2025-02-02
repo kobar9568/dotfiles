@@ -84,6 +84,12 @@ function dct() {
     deactivate
 }
 
+# Count items in current directory.
+function count() {
+    $count = (Get-ChildItem "./" -File -Recurse).Count
+    echo $count
+}
+
 # エイリアス
 function ..() {Set-Location ../}
 
