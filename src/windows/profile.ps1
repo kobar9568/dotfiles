@@ -61,7 +61,7 @@ if (Get-Alias "cat" -ErrorAction SilentlyContinue) {
 function cat() {Get-Content -Encoding UTF8 $Args}
 
 # セッション単位ではないhistory
-if (Get-Alias "histroy" -ErrorAction SilentlyContinue) {
+if (Get-Alias "history" -ErrorAction SilentlyContinue) {
     Remove-Item Alias:history -Force
 }
 function history() {
