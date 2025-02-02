@@ -73,6 +73,17 @@ function chmod() {
     Set-ItemProperty $args[0] -Name IsReadOnly -Value $true
 }
 
+# Activate current directory venv
+function act() { # TODO: activate command in PlatformIO.
+    $activate_script_path = (Join-Path -Path (Get-Location) -ChildPath "venv\Scripts\Activate.ps1")
+    if ($activate_script_path) {
+        .$activate_script_path
+    }
+}
+function dct() {
+    deactivate
+}
+
 # エイリアス
 function ..() {Set-Location ../}
 
