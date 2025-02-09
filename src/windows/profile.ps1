@@ -557,7 +557,7 @@ function Show-USBFlashSN() {
 function ytd() {
     $url = $args[0]
 
-    $fqdn = $url.split("://")[3]
+    $fqdn = (($url -split "://")[1] -split "/")[0]
     $stringAsStream = [System.IO.MemoryStream]::new()
     $writer = [System.IO.StreamWriter]::new($stringAsStream)
     $writer.write($fqdn)
