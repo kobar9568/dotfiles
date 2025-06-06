@@ -69,5 +69,9 @@
     {
         "key": "f8",
         "command": "workbench.action.webview.openDeveloperTools"
+    },
+    {
+        "key": "shift+alt+n",
+        "command": "workbench.action.duplicateWorkspaceInNewWindow"
     }
 ]
