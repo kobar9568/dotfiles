@@ -236,6 +236,11 @@ nnoremap <C-d> :call CocAction('jumpDefinition')<CR>
 " Trigger isort on save. (Maybe duplicating with black.)
 autocmd BufWritePre *.py silent! :call CocAction('runCommand', 'python.sortImports')
 
+" Convert from :d to :D in command mode.
+cnoreabbrev d D
+" Open 2 pain diff in :D command.
+command! D windo diffthis
+
 " ROT13 function
 "
 function ROT13(plaintext)
