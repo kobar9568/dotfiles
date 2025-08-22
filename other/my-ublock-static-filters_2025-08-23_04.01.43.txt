@@ -298,11 +298,11 @@ outlook.live.com##.GssDD
 www.youtube.com##.ytp-button.ytp-next-button
 
 ! Mar 17, 2025 https://www.youtube.com
-www.youtube.com##.ytp-autonav-toggle-button-container
-www.youtube.com##button.ytp-button:nth-of-type(3)
 www.youtube.com##.ytp-button.ytp-miniplayer-button
-www.youtube.com##.ytp-button.ytp-remote-button
-www.youtube.com##button.ytp-button:nth-of-type(2)
+!www.youtube.com##.ytp-button.ytp-remote-button
 
 ! May 10, 2025 https://mail.google.com
 mail.google.com##.I6agWe
+
+! Aug 23, 2025 https://www.youtube.com
+www.youtube.com##.ytp-autonav-toggle.ytp-button
