@@ -1,0 +1,308 @@
+# ???
+*://d1diibm942544q.cloudfront.net/*
+*://*.d1diibm942544q.cloudfront.net/*
+
+# Lowbrow curation site
+*://entametalk.jp/*
+*://*.entametalk.jp/*
+
+*://saikosoft.jp/*
+*://*.saikosoft.jp/*
+
+*://kachi-share.com/*
+*://*.kachi-share.com/*
+
+*://saisin-news.com/*
+*://*.saisin-news.com/*
+
+*://tyu-blog.com/*
+*://*.tyu-blog.com/*
+
+*://rio2016-live.com/*
+*://*.rio2016-live.com/*
+
+*://keeeping-healthy.com/*
+*://*.keeeping-healthy.com/*
+
+*://techspectacle.com/*
+*://*.techspectacle.com/*
+
+# Lowbrow software
+*://partitionwizard.com/*
+*://*.partitionwizard.com/*
+*://www.minitool.fr/*
+*://*.minitool.fr/*
+*://partitionwizard.jp/*
+*://*.partitionwizard.jp/*
+*://minitool.com/*
+*://*.minitool.com/*
+*://videoconverterfactory.com/*
+*://*.videoconverterfactory.com/*
+*://imobie.com/*
+*://*.imobie.com/*
+
+# Exclude YouTube my video???
+@@https://www.youtube.com/watch?v=Su10luoc0Dc
+
+! 2023-12-24 https://twitter.com
+twitter.com##.r-kmv1fd.r-779j7e.r-uaa2di.r-eqz5dr.r-1habvwh.css-175oi2r
+twitter.com##div.r-14wv3jr.r-g2wdr4.r-1udh08x.r-1cad53l.r-rs99b7.r-1phboty.r-1867qdf.css-175oi2r:nth-of-type(3)
+twitter.com##a.r-1loqt21.r-1ny4l3l.r-13qz1uu.r-oyd9sg.r-1habvwh.r-16y2uox.r-eqz5dr.r-6koalj.css-175oi2r:nth-of-type(8)
+
+! 2023-12-26 https://www.forbes.com
+www.forbes.com##.no-close.zephr-generic-modal.zephr-article-modal-modal
+www.forbes.com##.zephr-backdrop.zephr-article-modal-backdrop
+
+! 2024-01-04 https://twitter.com
+twitter.com##.r-12vffkv.r-1p0dtai.r-1d2f490.r-1xcajam.r-zchlnj.r-aqfbo4.css-175oi2r
+
+! 2024-01-13 https://www.nicovideo.jp
+www.nicovideo.jp##.MainContainer-marquee
+www.nicovideo.jp##.GiftSubEffectContainer
+www.nicovideo.jp##.EasyCommentContainer
+
+! 2024-01-30 https://twitter.com
+twitter.com##.r-1ny4l3l.r-1adg3ll.css-175oi2r > .css-175oi2r > .r-kemksi.css-175oi2r
+twitter.com##.r-1ye8kvj.r-13qz1uu.r-1jgb5lz.r-11wrixw.r-61z16t.r-184en5c.r-16y2uox.r-1phboty.r-1ljd8xs.r-13l2t4g.r-1kqtdi0.r-kemksi.css-175oi2r > .css-175oi2r > .r-1ye8kvj.r-13qz1uu.r-1jgb5lz.css-175oi2r > .css-175oi2r > .css-175oi2r > .css-175oi2r > div > div:nth-of-type(2)
+
+! 2024-01-31 https://www.pixiv.net
+www.pixiv.net##.lhcRrG.sc-1j6j1zx-3
+www.pixiv.net##.cRPGXW.sc-1p2gd44-7
+www.pixiv.net##.cugra.sc-4nj1pr-4
+www.pixiv.net##.-ml-8.flex
+www.pixiv.net##.bottom-0.sticky.mt-8
+
+! 2024-01-31 https://auctions.yahoo.co.jp
+auctions.yahoo.co.jp###uhd_offer05 > .compo > .txt
+auctions.yahoo.co.jp###uhd_offer00 > .compo > .txt
+auctions.yahoo.co.jp###uhd_offer01 > .compo > .txt
+
+! 2024-01-31 https://www.nicovideo.jp
+www.nicovideo.jp##.PersonalFrameContainer
+www.nicovideo.jp##.RightSideContainer-personalFrame.PersonalFrame
+
+! 2024-02-04 https://www.youtube.com
+www.youtube.com##.ytd-statement-banner-renderer.style-scope
+
+! 2024-02-08 https://www.nicovideo.jp
+www.nicovideo.jp##.common-header-m5ds7e
+
+auctions.yahoo.co.jp###uhd_offer02 > .compo > .txt
+auctions.yahoo.co.jp###uhd_offer03 > .compo > .txt
+auctions.yahoo.co.jp###uhd_offer04 > .compo > .txt
+
+! 2024-02-26 https://auctions.yahoo.co.jp
+auctions.yahoo.co.jp###uhd_offer06 > .compo > .txt
+
+! 2024-03-02 https://support.microsoft.com
+support.microsoft.com##.enRQJP.sc-bBHHxi.railbanner_m365.RailBanner.LAXVZ.sc-ezbkAF
+support.microsoft.com###supFeedbackWrapper
+
+! 2024-03-06 https://twitter.com
+twitter.com##.r-1mnxbyr.css-175oi2r > div.r-18u37iz.r-1awozwy.css-175oi2r:nth-of-type(1)
+twitter.com##div.r-18u37iz.r-1awozwy.css-175oi2r:nth-of-type(3)
+
+auctions.yahoo.co.jp###uhd_offer07 > .compo > .txt
+
+! 2024-03-22 https://page.auctions.yahoo.co.jp
+||s.yimg.jp/images/slink/highlightsearch/1.0/img/icon_search_white.png$image
+||s.yimg.jp/images/slink/highlightsearch/1.0/img/icon_search_white.png$image
+
+! 2024-03-23 https://bunshun.jp
+bunshun.jp###twitter-share-btn
+
+! 2024-03-25 https://www.weblio.jp
+www.weblio.jp##.firstDictVideoAd
+
+! 2024-03-28 https://twitter.com
+twitter.com##.r-iyfy8q.r-1064s9p.css-175oi2r
+
+! 2024-03-29 https://chiebukuro.yahoo.co.jp
+chiebukuro.yahoo.co.jp###uhd_offer01
+chiebukuro.yahoo.co.jp###uhd_offer00
+chiebukuro.yahoo.co.jp###uhd_offer06
+
+! 2024-04-03 https://www.youtube.com
+www.youtube.com##tp-yt-paper-dialog.ytd-popup-container.style-scope
+
+! 2024-04-08 https://twitter.com
+twitter.com##div.r-16y2uox.r-cpa5s6.r-6b64d0.css-175oi2r:nth-of-type(4)
+twitter.com##div.r-16y2uox.r-cpa5s6.r-6b64d0.css-175oi2r:nth-of-type(3)
+twitter.com##div.r-18u37iz.r-1awozwy.css-175oi2r:nth-of-type(4)
+twitter.com##.r-1ye8kvj.r-13qz1uu.r-1jgb5lz.css-175oi2r > .css-175oi2r > .css-175oi2r > .css-175oi2r > div > div:nth-of-type(3)
+twitter.com##.r-13qz1uu.r-1jgb5lz.css-175oi2r > .css-175oi2r > .css-175oi2r > .css-175oi2r > div > div:nth-of-type(3)
+
+! 2024-04-14 https://www.youtube.com
+www.youtube.com##ytd-rich-section-renderer.ytd-rich-grid-renderer.style-scope
+
+! 2024-04-19 https://twitter.com
+twitter.com##div.r-1udh08x.r-1cad53l.r-rs99b7.r-1phboty.r-1867qdf.r-1kqtdi0.r-kemksi.css-175oi2r:nth-of-type(4)
+twitter.com##div.r-1udh08x.r-1cad53l.r-rs99b7.r-1phboty.r-1867qdf.r-1kqtdi0.r-kemksi.css-175oi2r
+
+! 2024-04-21 https://page.auctions.yahoo.co.jp
+||s.yimg.jp/images/slink/highlightsearch/1.0/img/icon_search_white.png$image
+
+! 2024-04-21 https://ja.hentai-cosplays.com
+ja.hentai-cosplays.com###right
+
+! 2024-04-22 https://www.nicovideo.jp
+||wktk.cdn.nimg.jp/wktk/202/image/ygmmzMjVEr.png$image
+||wktk.cdn.nimg.jp/wktk/202/image/vXrGH2v-Mp.png$image
+
+! 2024-04-23 https://www.nicovideo.jp
+www.nicovideo.jp##.FixedFooterContainer
+
+! 2024-04-23 https://vk.com
+vk.com##.PageBottomBanner--bg-blue.PageBottomBanner--animated.PageBottomBanner--unauth.PageBottomBanner
+
+! 2024-04-26 https://detail.chiebukuro.yahoo.co.jp
+||s.yimg.jp/images/ks/promo/chie20th/20th_bg.png$image
+
+! 2024-04-26 https://www.yahoo.co.jp
+www.yahoo.co.jp##.inner
+
+! 2024-04-26 https://news.yahoo.co.jp
+news.yahoo.co.jp##li.hQnMZG.sc-5amsu5-0:nth-of-type(2)
+news.yahoo.co.jp##li.hQnMZG.sc-5amsu5-0:nth-of-type(4)
+news.yahoo.co.jp##li.hQnMZG.sc-5amsu5-0:nth-of-type(5)
+news.yahoo.co.jp##li.hQnMZG.sc-5amsu5-0:nth-of-type(6)
+
+! 2024-04-26 https://www.nicovideo.jp
+||wktk.cdn.nimg.jp/wktk/391/banner/6khyjewYAl.png$image
+
+! 2024-04-28 https://twitter.com
+! Block ???
+!twitter.com##.r-1ny4l3l.r-kmv1fd.r-779j7e.r-1wtj0ep.css-175oi2r
+!twitter.com##.r-1loqt21.r-1ny4l3l.r-6416eg.r-o7ynqc.r-23eiwj.r-779j7e.css-175oi2r
+!twitter.com##div:nth-of-type(9)
+
+! 2024-04-28 https://www.youtube.com
+www.youtube.com##.ytd-feed-nudge-renderer.style-scope
+
+! 2024-04-29 https://twitter.com
+! Block comunity note notification
+!twitter.com##.r-1loqt21.r-1ny4l3l.r-6416eg.r-o7ynqc.r-1eltapf.r-779j7e.r-kmv1fd.css-175oi2r
+!twitter.com##.r-1ye8kvj.r-13qz1uu.r-1jgb5lz.r-11wrixw.r-61z16t.r-184en5c.r-16y2uox.r-1phboty.r-1ljd8xs.r-13l2t4g.r-1kqtdi0.r-kemksi.css-175oi2r > .css-175oi2r > .r-1ye8kvj.r-13qz1uu.r-1jgb5lz.css-175oi2r > .css-175oi2r > .css-175oi2r > div > div:nth-of-type(1)
+!twitter.com##.r-1ye8kvj.r-13qz1uu.r-1jgb5lz.r-11wrixw.r-61z16t.r-184en5c.r-16y2uox.r-1phboty.r-1ljd8xs.r-13l2t4g.r-1kqtdi0.r-kemksi.css-175oi2r > .css-175oi2r > .r-1ye8kvj.r-13qz1uu.r-1jgb5lz.css-175oi2r > .css-175oi2r > .css-175oi2r > div > div:nth-of-type(2)
+!
+!twitter.com##div:nth-of-type(23)
+
+! 2024-04-29 https://twitter.com
+! Block comunity note notification
+!twitter.com##div:nth-of-type(1) > .r-1ny4l3l.r-1adg3ll.r-qklmqi.r-1igl3o0.css-175oi2r
+
+! 2024-05-07 https://www.youtube.com
+! Block community note
+!www.youtube.com###below
+
+! 2024-05-07 https://twitter.com
+twitter.com##a.r-1loqt21.r-1ny4l3l.r-13qz1uu.r-oyd9sg.r-1habvwh.r-16y2uox.r-eqz5dr.r-6koalj.css-175oi2r:nth-of-type(9)
+twitter.com##a.r-1loqt21.r-1ny4l3l.r-13qz1uu.r-oyd9sg.r-1habvwh.r-16y2uox.r-eqz5dr.r-6koalj.css-175oi2r:nth-of-type(5)
+
+! 2024-05-15 https://twitter.com
+twitter.com##a.r-1loqt21.r-1ny4l3l.r-13qz1uu.r-cnw61z.r-1habvwh.r-16y2uox.r-eqz5dr.r-6koalj.css-175oi2r:nth-of-type(5)
+twitter.com##a.r-1loqt21.r-1ny4l3l.r-13qz1uu.r-cnw61z.r-1habvwh.r-16y2uox.r-eqz5dr.r-6koalj.css-175oi2r:nth-of-type(9)
+
+! 2024-05-16 https://x.com
+x.com##.r-5wli1b.r-1jte41z.r-hvns9x.r-i0ley5.r-173mn98.css-175oi2r
+x.com##a.r-1loqt21.r-1ny4l3l.r-13qz1uu.r-cnw61z.r-1habvwh.r-16y2uox.r-eqz5dr.r-6koalj.css-175oi2r:nth-of-type(5)
+x.com##a.r-1loqt21.r-1ny4l3l.r-13qz1uu.r-cnw61z.r-1habvwh.r-16y2uox.r-eqz5dr.r-6koalj.css-175oi2r:nth-of-type(9)
+x.com##div.css-175oi2r:nth-of-type(3) > .r-1udh08x.r-1cad53l.r-rs99b7.r-1phboty.r-1867qdf.r-1kqtdi0.r-kemksi.css-175oi2r
+x.com##div.r-18u37iz.r-1awozwy.css-175oi2r:nth-of-type(3)
+x.com##.r-1mnxbyr.css-175oi2r > div.r-18u37iz.r-1awozwy.css-175oi2r:nth-of-type(2)
+x.com##.r-1mnxbyr.css-175oi2r > div.r-18u37iz.r-1awozwy.css-175oi2r:nth-of-type(1)
+x.com##div.r-1udh08x.r-1cad53l.r-rs99b7.r-1phboty.r-1867qdf.r-1kqtdi0.r-kemksi.css-175oi2r:nth-of-type(5)
+
+! 2024-05-17 https://x.com
+x.com##div.r-16y2uox.r-cpa5s6.r-14tvyh0.css-175oi2r:nth-of-type(4)
+x.com##div.r-16y2uox.r-cpa5s6.r-14tvyh0.css-175oi2r:nth-of-type(3)
+x.com##.r-iyfy8q.r-1064s9p.css-175oi2r
+
+! 2024-05-18 https://x.com
+x.com##.r-1ye8kvj.r-13qz1uu.r-f8sm7e.r-1t251xo.r-1c4cdxw.r-184en5c.r-16y2uox.r-1phboty.r-th6na.r-1ua6aaf.r-1kqtdi0.r-kemksi.css-175oi2r > .css-175oi2r > .r-1ye8kvj.r-13qz1uu.r-f8sm7e.css-175oi2r > .css-175oi2r > .css-175oi2r > .css-175oi2r > div > div.css-175oi2r:nth-of-type(1)
+x.com##div.css-175oi2r:nth-of-type(4) > .r-1udh08x.r-1cad53l.r-rs99b7.r-1phboty.r-1867qdf.r-1kqtdi0.r-kemksi.css-175oi2r
+
+! 2024-05-21 https://kotobank.jp
+kotobank.jp##.modal-content
+kotobank.jp###payment
+kotobank.jp###payment_info
+
+! 2024-05-21 https://x.com
+x.com##.r-5wli1b.r-1jte41z.r-hvns9x.r-1fqalh9.r-173mn98.css-175oi2r
+
+! 2024-05-24 https://x.com
+Try Block Settings > Premium
+!x.com##div.css-175oi2r:nth-of-type(2) > div.css-175oi2r:nth-of-type(3)
+
+! Jun 5, 2024 https://x.com
+x.com##.r-1ye8kvj.r-13qz1uu.r-f8sm7e.css-175oi2r > .css-175oi2r > .css-175oi2r > .css-175oi2r > div > div.css-175oi2r:nth-of-type(3)
+
+! Jun 10, 2024 https://x.com
+x.com##div.r-12vffkv.r-1p0dtai.r-1xcajam.r-1d2f490.r-zchlnj.r-aqfbo4.css-175oi2r > .r-12vffkv.css-175oi2r > .r-12vffkv.css-175oi2r > .r-ipm5af.r-zchlnj.r-bnwqim.r-1d2f490.r-1adg3ll.r-1p0dtai.css-175oi2r > .r-ipm5af.r-zchlnj.r-bnwqim.r-1d2f490.r-1adg3ll.r-1p0dtai.r-417010.r-13wfysu.r-t60dpp.r-bcqeeo.r-ifefl9.r-crgep1.r-1ebb2ja.r-eqz5dr.r-1mlwlqe.r-deolkf.r-vqxq0j.r-1niwhzg.r-1oszu61 > .r-1wbh5a2.r-16y2uox.r-1pz39u2.css-175oi2r
+
+! Jun 16, 2024 https://x.com
+x.com##div.r-18u37iz.r-1awozwy.css-175oi2r:nth-of-type(4)
+
+! Jun 28, 2024 https://x.com
+x.com##a.r-1loqt21.r-1ny4l3l.r-13qz1uu.r-cnw61z.r-1habvwh.r-16y2uox.r-eqz5dr.r-6koalj.css-175oi2r:nth-of-type(10)
+
+! Aug 3, 2024 https://x.com
+x.com##.r-1loqt21.r-1ny4l3l.r-6416eg.r-o7ynqc.r-gu64tb.r-mxifo9.r-1sp3mco.r-lrvibr.r-rs99b7.r-1phboty.r-sdzlij.css-175oi2r
+
+! Aug 4, 2024 https://www.google.com
+www.google.com###bres > div.MjjYud
+www.google.com##div.MjjYud:nth-of-type(3)
+
+! Aug 11, 2024 https://x.com
+x.com##.r-1loqt21.r-1ny4l3l.r-6416eg.r-o7ynqc.r-1m1l54l.r-1y7e96w.r-12sks89.r-lrvibr.r-rs99b7.r-1phboty.r-sdzlij.css-175oi2r
+
+! Sep 13, 2024 https://x.com
+x.com##a.r-1loqt21.r-1ny4l3l.r-13qz1uu.r-cnw61z.r-1habvwh.r-16y2uox.r-eqz5dr.r-6koalj.css-175oi2r:nth-of-type(11)
+x.com##a.r-1loqt21.r-1ny4l3l.r-13qz1uu.r-cnw61z.r-1habvwh.r-16y2uox.r-eqz5dr.r-6koalj.css-175oi2r:nth-of-type(8)
+
+! Sep 20, 2024 https://ejje.weblio.jp
+ejje.weblio.jp###main > div.mainBlock:nth-of-type(4)
+
+! Oct 18, 2024 https://note.com
+note.com##.m-shareSheet
+
+! Nov 8, 2024 https://x.com
+x.com##.r-1loqt21.r-1ny4l3l.r-6416eg.r-o7ynqc.r-1udh08x.r-a1ub67.r-rs99b7.r-1867qdf.r-1kqtdi0.css-175oi2r
+x.com##.r-kritb0.r-16dba41.r-1f529hi.r-1enofrn.r-37j5jr.r-qvutc0.r-1ttztb7.r-bcqeeo.css-146c3p1
+
+! Nov 14, 2024 https://x.com
+x.com##.r-gu64tb.r-kritb0.r-17s6mgv.r-ipm5af.r-zchlnj.r-u8s1d.r-1d2f490.r-1p0dtai.css-175oi2r
+x.com##.r-1loqt21.r-1ny4l3l.r-6416eg.r-o7ynqc.css-175oi2r > .r-1udh08x.r-1adg3ll.css-175oi2r
+
+! Nov 17, 2024 https://x.com
+||abs.twimg.com/images/anniversary-theme-image-v2.png$image
+||abs.twimg.com/images/anniversary-theme-image-v2.png$image
+||abs.twimg.com/images/anniversary-theme-image-v2.png$image
+
+! Nov 18, 2024 https://chatgpt.com
+chatgpt.com##.dark\:border-white\/20.empty\:hidden.py-2.flex-col.flex
+
+! Dec 2, 2024 https://mail.google.com
+mail.google.com##.brC-aMv-auO.brC-dA-I-Jw
+
+! Dec 3, 2024 https://www.google.com
+www.google.com##.M8OgIe
+
+! Jan 20, 2025 https://www.youtube.com
+www.youtube.com##ytd-emergency-onebox-renderer.ytd-item-section-renderer.style-scope
+
+! Mar 10, 2025 https://outlook.live.com
+outlook.live.com##.GssDD
+
+! Mar 11, 2025 https://www.youtube.com
+www.youtube.com##.ytp-button.ytp-next-button
+
+! Mar 17, 2025 https://www.youtube.com
+www.youtube.com##.ytp-autonav-toggle-button-container
+www.youtube.com##button.ytp-button:nth-of-type(3)
+www.youtube.com##.ytp-button.ytp-miniplayer-button
+www.youtube.com##.ytp-button.ytp-remote-button
+www.youtube.com##button.ytp-button:nth-of-type(2)
+
+! May 10, 2025 https://mail.google.com
+mail.google.com##.I6agWe
