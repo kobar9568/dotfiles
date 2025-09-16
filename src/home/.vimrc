@@ -1,3 +1,36 @@
+" Define external file path.
+"
+if has('unix')
+  let s:backupdir = '~/.config/vim/backup/'
+  let s:directory = '~/.config/vim/swap/'
+  let s:undodir   = '~/.config/vim/undo/'
+elseif has('win32')
+  let s:backupdir = $APPDATA . '\Vim\Backup\'
+  let s:directory = $APPDATA . '\Vim\Swap\'
+  let s:undodir   = $APPDATA . '\Vim\Undo\'
+endif
+
+if !isdirectory(s:backupdir)
+  call mkdir(s:backupdir, 'p')
+endif
+if !isdirectory(s:directory)
+  call mkdir(s:directory, 'p')
+endif
+if !isdirectory(s:undodir)
+  call mkdir(s:undodir, 'p')
+endif
+
+" I want to use var, But it's a hassle.
+if has('unix')
+  set backupdir=~/.config/vim/backup/
+  set directory=~/.config/vim/swap/
+  set undodir=~/.config/vim/undo/
+elseif has('win32')
+  set backupdir=~\AppData\Roaming\Vim\Backup\
+  set directory=~\AppData\Roaming\Vim\Swap\
+  set undodir=~\AppData\Roaming\Vim\Undo\
+endif
+
 " Define behavior of external files.
 "
 set nobackup
