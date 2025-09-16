@@ -34,7 +34,8 @@ endif
 " Define behavior of external files.
 "
 set nobackup
-set noswapfile
+set swapfile
+set undofile
 set viminfo=
 
 " Define behavior of save file.
