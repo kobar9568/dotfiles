@@ -105,6 +105,7 @@ set backspace=2
 " Define system behavior.
 "
 set updatetime=250
+set updatecount=200
 set ttimeoutlen=0
 set wildmode=list:longest
 
