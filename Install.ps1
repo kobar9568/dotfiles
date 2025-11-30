@@ -56,6 +56,10 @@ New-Item -Value "$PSScriptRoot\src\Parsec\config.txt" -Path "~\AppData\Roaming\P
 New-Item "C:\Portable Program\TVTest-0.9.0-x64\" -ItemType Directory
 New-Item -Value "$PSScriptRoot\src\TVTest\BonDriver_Mirakurun.ini" -Path "C:\Portable Program\TVTest-0.9.0-x64\" -Name "BonDriver_Mirakurun.ini" -ItemType SymbolicLink
 
+# Firefox config
+New-Item "~\AppData\Roaming\Mozilla\Firefox\Profiles\jdfy07tv.default-release\chrome\" -ItemType Directory
+New-Item -Value "$PSScriptRoot\src\firefox\userChrome.css" -Path "~\AppData\Roaming\Mozilla\Firefox\Profiles\jdfy07tv.default-release\chrome\" -Name "userChrome.css" -ItemType SymbolicLink
+
 # Set Environment variables.
 
 # Python encoding
