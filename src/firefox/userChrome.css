@@ -1,0 +1,18 @@
+/* 日本語IMEが有効なキーボードでURLバーにフォーカスした際に全角に切り替える (デフォルトでは半角になることへの対処) */
+*|*#urlbar *|input,
+*|*#searchbar *|input {
+  ime-mode: active !important;
+}
+
+/* タブの最小幅制限を解除 */
+.tabbrowser-tab {
+  min-width: initial !important;
+}
+.tab-content {
+  overflow: hidden !important;
+}
+
+/* ウインドウモード時にのみタブ左側に表示される謎の空白を削除 */
+.titlebar-spacer {
+  width: 0px !important;
+}
