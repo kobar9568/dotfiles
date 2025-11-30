@@ -1,3 +1,5 @@
+/* Tested: Firefox 145.0.2 on Windows 11 */
+
 /* 日本語IMEが有効なキーボードでURLバーにフォーカスした際に全角に切り替える (デフォルトでは半角になることへの対処) */
 *|*#urlbar *|input,
 *|*#searchbar *|input {
