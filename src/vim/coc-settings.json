@@ -16,5 +16,28 @@
         "--disallow-untyped-defs",
         "--disallow-incomplete-defs",
         "--check-untyped-defs"
+    ],
+    "yaml.customTags": [
+        "!Base64",
+        "!Base64 mapping",
+        "!Cidr sequence",
+        "!And sequence",
+        "!Equals sequence",
+        "!If sequence",
+        "!Not sequence",
+        "!Or sequence",
+        "!Condition",
+        "!FindInMap sequence",
+        "!GetAtt",
+        "!GetAtt sequence",
+        "!GetAZs",
+        "!ImportValue",
+        "!Join sequence",
+        "!Select sequence",
+        "!Split sequence",
+        "!Sub",
+        "!Sub sequence",
+        "!Transform mapping",
+        "!Ref"
     ]
 }
