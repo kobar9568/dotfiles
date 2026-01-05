@@ -1,4 +1,4 @@
-/* Tested: Firefox 145.0.2 on Windows 11 */
+/* Tested: Firefox 146.0.1 on Windows 11 */
 
 /* 日本語IMEが有効なキーボードでURLバーにフォーカスした際に全角に切り替える (デフォルトでは半角になることへの対処) */
 *|*#urlbar *|input,
@@ -18,4 +18,9 @@
 /* タブの左側の要素を消した場合、タブ数が多くなるとウインドウが掴めなくなるので注意 */
 .titlebar-spacer {
   width: 0px !important;
+}
+
+/* タブバー左側に余白 */
+.toolbar-items {
+  margin-right: 48px;
 }
