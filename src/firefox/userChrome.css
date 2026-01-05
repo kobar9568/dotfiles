@@ -61,3 +61,25 @@
 .tabbrowser-tab .tab-content {
   padding-right: 26px !important; /* close 18 + 余白 */
 }
+
+/* タブ内を “幅で条件分岐できるコンテナ” にする */
+.tabbrowser-tab .tab-content {
+  container-type: inline-size !important;
+  position: relative !important;
+  display: flex;
+  align-items: center;
+  padding-right: 26px !important; /* close 分 */
+}
+
+/* ★狭くなったら favicon を消す（ここが本題） */
+@container (max-width: 18px) {
+  .tabbrowser-tab[selected="true"] .tab-icon-image,
+  .tabbrowser-tab[visuallyselected="true"] .tab-icon-image,
+  .tabbrowser-tab[visuallyselected] .tab-icon-image {
+    display: none !important;
+  }
+  /* favicon消した分、タイトルを左に詰めたいなら余白も調整 */
+  .tab-label-container {
+    margin-inline-start: 0 !important;
+  }
+}
