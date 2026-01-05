@@ -24,3 +24,46 @@
 .toolbar-items {
   margin-right: 48px;
 }
+
+/* 閉じるボタンを右側に固定+タブ幅現象時はタイトル・faviconに重なる */
+/* Code by GPT-5.2 */
+/* 基準 */
+.tabbrowser-tab .tab-content {
+  position: relative !important;
+  display: flex;
+  align-items: center;
+}
+
+/* ラベル(タイトル)側：縮められる + はみ出たら隠す */
+.tabbrowser-tab .tab-label-container {
+  min-width: 0 !important;
+  overflow: hidden !important;
+}
+
+/* favicon も縮められる対象に */
+.tabbrowser-tab .tab-icon-image {
+  flex-shrink: 0;                /* 通常は縮まない */
+  margin-inline-end: 6px;
+}
+
+/* タイトル：省略も効かせる */
+.tabbrowser-tab .tab-label {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+/* 閉じるボタン：右端固定＆前面 */
+.tabbrowser-tab .tab-close-button {
+  position: absolute !important;
+  right: 8px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10 !important;   /* ← “バツが最優先” */
+  box-sizing: border-box !important;
+}
+
+/* ここが肝：タイトル(ラベル領域)は右側を閉じる分だけ「クリップ」する */
+.tabbrowser-tab .tab-content {
+  padding-right: 26px !important; /* close 18 + 余白 */
+}
