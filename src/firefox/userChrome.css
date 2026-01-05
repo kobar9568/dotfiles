@@ -40,12 +40,6 @@
   overflow: hidden !important;
 }
 
-/* favicon も縮められる対象に */
-.tabbrowser-tab .tab-icon-image {
-  flex-shrink: 0;                /* 通常は縮まない */
-  margin-inline-end: 6px;
-}
-
 /* タイトル：省略も効かせる */
 .tabbrowser-tab .tab-label {
   overflow: hidden !important;
