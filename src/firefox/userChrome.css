@@ -84,11 +84,6 @@
   }
 }
 
-/* 非アクティブは余白なし */
-.tabbrowser-tab:not([selected="true"]):not([visuallyselected="true"]):not([visuallyselected]) .tab-content{
-  padding-right: 0 !important;
-}
-
 /* アクティブだけ close 分の余白 */
 .tabbrowser-tab[selected="true"] .tab-content,
 .tabbrowser-tab[visuallyselected="true"] .tab-content,
