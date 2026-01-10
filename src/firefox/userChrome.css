@@ -25,8 +25,8 @@
   margin-right: 48px;
 }
 
-/* 閉じるボタンを右側に固定+タブ幅現象時はタイトル・faviconに重なる */
 /* Code by GPT-5.2 */
+/* 閉じるボタンを右側に固定+タブ幅現象時はタイトル・faviconに重なる */
 /* 基準 */
 .tabbrowser-tab .tab-content {
   position: relative !important;
