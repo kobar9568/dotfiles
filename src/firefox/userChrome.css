@@ -70,6 +70,24 @@
   align-items: center;
 }
 
+/* ★ container は tabbrowser-tab に付ける */
+.tabbrowser-tab {
+  container-type: inline-size !important;
+}
+
+/* 非アクティブは基本 0（極小化優先） */
+.tabbrowser-tab:not([selected="true"]):not([visuallyselected="true"]):not([visuallyselected]) .tab-content {
+  padding-right: 0 !important;
+}
+
+/* ★非アクティブでも「幅がある時だけ」close 分の余白を入れる */
+/* 非アクティブ、かつ閉じるボタンが表示されている間のみ、padding-rightを入れることでページタイトルと閉じるボタンが重なることを防止 */
+@container (min-width: 1px) {
+  .tabbrowser-tab:not([selected="true"]):not([visuallyselected="true"]):not([visuallyselected]) .tab-content {
+    padding-right: 26px !important;
+  }
+}
+
 /* ★狭くなったら favicon を消す（ここが本題） */
 @container (max-width: 18px) {
   .tabbrowser-tab[selected="true"] .tab-icon-image,
