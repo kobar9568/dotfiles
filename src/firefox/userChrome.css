@@ -101,6 +101,13 @@
   }
 }
 
+/* アクティブタブだけ：×ボタンが潰れない最低幅を確保 */
+.tabbrowser-tab[selected="true"],
+.tabbrowser-tab[visuallyselected="true"],
+.tabbrowser-tab[visuallyselected] {
+  min-width: 36px !important; /* まずは 40px。大きければ 36px まで下げてもOK */
+}
+
 /* アクティブだけ close 分の余白 */
 .tabbrowser-tab[selected="true"] .tab-content,
 .tabbrowser-tab[visuallyselected="true"] .tab-content,
