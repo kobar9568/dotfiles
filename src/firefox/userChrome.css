@@ -114,3 +114,13 @@
 .tabbrowser-tab[visuallyselected] .tab-content{
   padding-right: 26px !important;
 }
+
+/* コンテキストメニュー in viewport */
+#context-inspect-a11y { /* Inspect Accessibility Properties */
+  display: none;
+}
+
+/* コンテキストメニュー in ブックマーク・履歴 */
+#placesContext_open { /* Open */
+  display: none;
+}
