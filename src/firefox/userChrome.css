@@ -124,3 +124,8 @@
 #placesContext_open { /* Open */
   display: none;
 }
+
+/* アドレスバー右側: 拡張機能による追加アイコン */
+#pageAction-urlbar-_testpilot-containers { /* Firefox Multi-Account Containers */
+  display: none;
+}
