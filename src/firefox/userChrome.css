@@ -119,6 +119,9 @@
 #context-inspect-a11y { /* Inspect Accessibility Properties */
   display: none;
 }
+#context-translate-selection { /* Translate Link Text to XXX, Translate Selection to XXX */
+  display: none;
+}
 
 /* コンテキストメニュー in ブックマーク・履歴 */
 #placesContext_open { /* Open */
