@@ -128,6 +128,14 @@
   display: none;
 }
 
+/* コンテキストメニュー in 検索 */
+#spell-check-enabled { /* Check Spelling */
+  display: none;
+}
+#context-sep-bidi { /* Separator After Check Spelling */
+  display: none;
+}
+
 /* アドレスバー右側: 拡張機能による追加アイコン */
 #pageAction-urlbar-_testpilot-containers { /* Firefox Multi-Account Containers */
   display: none;
