@@ -115,6 +115,48 @@
   padding-right: 26px !important;
 }
 
+/* 正方形サイズを固定 */
+.tabbrowser-tab[pinned]{
+  min-width: 36px !important;
+  max-width: 36px !important;
+  padding: 0 !important;
+}
+
+/* 中身を完全センター配置 */
+.tabbrowser-tab[pinned] .tab-content{
+  padding: 0 !important;
+  margin: 0 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* favicon をど真ん中に */
+.tabbrowser-tab[pinned] .tab-icon-stack{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ラベル・クローズは消す */
+.tabbrowser-tab[pinned] .tab-label-container,
+.tabbrowser-tab[pinned] .tab-close-button{
+  display: none !important;
+}
+
+/* 非アクティブ pinned でも padding-right を絶対に入れない */
+.tabbrowser-tab[pinned]:not([selected="true"]):not([visuallyselected="true"]):not([visuallyselected]) .tab-content{
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* ついでに pinned は状態問わず中央寄せを強制（保険） */
+.tabbrowser-tab[pinned] .tab-content{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
 /* コンテキストメニュー in viewport */
 #context-inspect-a11y { /* Inspect Accessibility Properties */
   display: none;
