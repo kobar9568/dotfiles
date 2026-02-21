@@ -15,6 +15,10 @@
 - Ubuntuの場合、`/usr/local/share/ca-certificates/`配下に設置する
   - ただし、ChromeやFirefoxは独自の証明書ストアを利用する
 
+### tpmプラグインのインストール
+- インストールスクリプト中でgithub.com/tmux-plugins/tpmをcloneする
+  - tmux起動後、`prefix` + `I`でインストールを実施する必要がある
+
 ## Installation (Linux)
 
 ```
