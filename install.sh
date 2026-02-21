@@ -161,3 +161,4 @@ fi
 # Firefox config
 mkdir -p $HOME/.mozilla/firefox/fts9ckj3.default-release/chrome/
 ln -s $HOME/dotfiles/src/firefox/userChrome.css $HOME/.mozilla/firefox/fts9ckj3.default-release/chrome/userChrome.css
+ln -s $HOME/dotfiles/src/firefox/user.js $HOME/.mozilla/firefox/fts9ckj3.default-release/user.js
