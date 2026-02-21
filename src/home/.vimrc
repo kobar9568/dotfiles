@@ -20,7 +20,7 @@ if !isdirectory(s:undodir)
   call mkdir(s:undodir, 'p')
 endif
 
-" I want to use var, But it's a hassle.
+" I want to use var, But it's a hassle. [TODO]
 if has('unix')
   set backupdir=~/.config/vim/backup/
   set directory=~/.config/vim/swap/
