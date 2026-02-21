@@ -138,6 +138,8 @@ fi
 if type "powerline" > /dev/null 2>&1; then
     if type "pip3" > /dev/null 2>&1; then
         export POWERLINE_REPOSITORY_ROOT=`pip3 show powerline-status | grep Location: | awk '{print $2}'`
+    else
+        export POWERLINE_REPOSITORY_ROOT="/usr/share" # apt installed
     fi
 fi
 
