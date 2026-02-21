@@ -178,6 +178,27 @@
   display: none;
 }
 
+/*コンテキストメニュー in 画像 */
+#context-sendimage {
+  display: none;
+}
+#context-setDesktopBackground {
+  display: none;
+}
+#context-sep-setbackground { /* Separator Before Set Desktop Background */
+  display: none;
+}
+
+/*コンテキストメニュー in 動画 */
+#context-sendvideo {
+  display: none;
+}
+
+/*コンテキストメニュー in 音声 */
+#context-sendaudio {
+  display: none;
+}
+
 /* アドレスバー右側: 拡張機能による追加アイコン */
 #pageAction-urlbar-_testpilot-containers { /* Firefox Multi-Account Containers */
   display: none;
