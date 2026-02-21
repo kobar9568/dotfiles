@@ -199,6 +199,11 @@
   display: none;
 }
 
+/* コンテキストメニュー in リンク */
+#context-sep-sharing { /* Separator Before Send Media? */
+  display: none;
+}
+
 /* アドレスバー右側: 拡張機能による追加アイコン */
 #pageAction-urlbar-_testpilot-containers { /* Firefox Multi-Account Containers */
   display: none;
