@@ -1,9 +1,9 @@
 " Define external file path.
 "
 if has('unix')
-  let s:backupdir = '~/.config/vim/backup/'
-  let s:directory = '~/.config/vim/swap/'
-  let s:undodir   = '~/.config/vim/undo/'
+  let s:backupdir = $HOME . '/.config/vim/backup/'
+  let s:directory = $HOME . '/.config/vim/swap/'
+  let s:undodir   = $HOME . '/.config/vim/undo/'
 elseif has('win32')
   let s:backupdir = $APPDATA . '\Vim\Backup\'
   let s:directory = $APPDATA . '\Vim\Swap\'
