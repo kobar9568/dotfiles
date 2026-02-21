@@ -157,3 +157,7 @@ if ! type "go" > /dev/null 2>&1; then
   rm -rf $HOME/go_install/
   go install github.com/pilu/fresh@latest
 fi
+
+# Firefox config
+mkdir -p $HOME/.mozilla/firefox/fts9ckj3.default-release/chrome/
+ln -s $HOME/dotfiles/src/firefox/userChrome.css $HOME/.mozilla/firefox/fts9ckj3.default-release/chrome/userChrome.css
