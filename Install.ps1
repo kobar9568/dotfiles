@@ -59,9 +59,11 @@ New-Item -Value "$PSScriptRoot\src\TVTest\BonDriver_Mirakurun.ini" -Path "C:\Por
 # Firefox config
 New-Item "~\AppData\Roaming\Mozilla\Firefox\Profiles\jdfy07tv.default-release\chrome\" -ItemType Directory
 New-Item -Value "$PSScriptRoot\src\firefox\userChrome.css" -Path "~\AppData\Roaming\Mozilla\Firefox\Profiles\jdfy07tv.default-release\chrome\" -Name "userChrome.css" -ItemType SymbolicLink
+New-Item -Value "$PSScriptRoot\src\firefox\user.js" -Path "~\AppData\Roaming\Mozilla\Firefox\Profiles\jdfy07tv.default-release\" -Name "user.js" -ItemType SymbolicLink
 # Firefox Beta config
 New-Item "~\AppData\Roaming\Mozilla\Firefox\Profiles\o3wy33o1.default-beta\chrome\" -ItemType Directory
 New-Item -Value "$PSScriptRoot\src\firefox\userChrome.css" -Path "~\AppData\Roaming\Mozilla\Firefox\Profiles\o3wy33o1.default-beta\chrome\" -Name "userChrome.css" -ItemType SymbolicLink
+New-Item -Value "$PSScriptRoot\src\firefox\user.js" -Path "~\AppData\Roaming\Mozilla\Firefox\Profiles\o3wy33o1.default-beta\" -Name "user.js" -ItemType SymbolicLink
 
 # Set Environment variables.
 
