@@ -157,6 +157,11 @@
   justify-content: center !important;
 }
 
+/* スプリットビューのセパレータ描画修正 */
+.split-view-splitter { /* 148.0, 149.0b1時点でのBug修正 */
+  z-index: 1;
+}
+
 /* コンテキストメニュー in viewport */
 #context-inspect-a11y { /* Inspect Accessibility Properties */
   display: none;
