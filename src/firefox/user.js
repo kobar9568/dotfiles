@@ -3,3 +3,4 @@ user_pref("browser.tabs.loadBookmarksInBackground", true); // Default: false
 user_pref("browser.bookmarks.openInTabClosesMenu", false); // Default: true
 user_pref("taskbar.grouping.useprofile", true); // Default: N/A
 user_pref("browser.altClickSave", true); // Default: false
+user_pref("browser.tabs.splitView.enabled", true); // Default: false
