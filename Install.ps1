@@ -40,6 +40,9 @@ New-Item -Value "$PSScriptRoot\src\Windows Terminal\settings.json" -Path "~\AppD
 # Tera Term config
 New-Item -Value "$PSScriptRoot\src\Tera Term\TERATERM.INI" -Path "~\Documents" -Name "TERATERM.INI" -ItemType SymbolicLink
 
+# Tera Term v5 config
+New-Item -Value "$PSScriptRoot\src\Tera Term\v5\TERATERM.INI" -Path "~\AppData\Roaming\teraterm5" -Name "TERATERM.INI" -ItemType SymbolicLink
+
 # neofetch config
 New-Item "~\.config\neofetch\" -ItemType Directory
 New-Item -Value "$PSScriptRoot\src\neofetch\config.conf" -Path "~\.config\neofetch\" -Name "config.conf" -ItemType SymbolicLink
