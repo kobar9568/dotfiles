@@ -20,6 +20,11 @@
   width: 0px !important;
 }
 
+/* タブ左側の要素を消した場合にウインドウを掴めるように修正 */
+.browser-titlebar {
+  padding-left: 12px !important;
+}
+
 /* タブバー左側に余白 */
 .toolbar-items {
   margin-right: 48px;
