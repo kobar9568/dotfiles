@@ -5,3 +5,4 @@ user_pref("taskbar.grouping.useprofile", true); // Default: N/A
 user_pref("browser.altClickSave", true); // Default: false
 user_pref("browser.tabs.splitView.enabled", true); // Default: false
 user_pref("reader.parse-on-load.enabled", false); // Default: true
+user_pref("ui.key.menuAccessKeyFocuses", false); // Default: true
