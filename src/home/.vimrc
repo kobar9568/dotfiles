@@ -155,6 +155,8 @@ cnoremap <M-l> <Right>
 cnoremap <M-x> <Del>
 " Use jj to enter command window.
 cnoremap jj <C-f>
+" Keep x from clobbering registers (use vdp instead of xp to swap characters)
+nnoremap x "_x
 
 " Accept suggestions when pressing Alt + L in terminal mode.
 " Workaround for a keycode problem.
