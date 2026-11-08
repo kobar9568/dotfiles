@@ -660,6 +660,62 @@ Set-PSReadLineKeyHandler -Chord 'Ctrl+g' -ScriptBlock {
     }
 }
 
+# Update the internal Vi register without changing the input buffer
+function Set-PSReadLineViRegister {
+    param([AllowEmptyString()][string]$Text)
+
+    $type = [Microsoft.PowerShell.PSConsoleReadLine]
+    $field = $type.GetField('_viRegister', 'NonPublic,Static')
+
+    if ($null -eq $field) {
+        throw 'Unsupported PSReadLine version: Vi register not found.'
+    }
+
+    $register = $field.GetValue($null)
+    $record = $register.GetType().GetMethod(
+        'Record', [type[]]@([System.Text.StringBuilder])
+    )
+    $buffer = [System.Text.StringBuilder]::new($Text)
+    $null = $record.Invoke($register, [object[]]@($buffer))
+}
+
+# Copy the entire command to both the clipboard and the Vi register
+Set-PSReadLineKeyHandler -Chord 'y,y' -ViMode Command -ScriptBlock {
+    $line = ''
+    $cursor = 0
+    [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState(
+        [ref]$line, [ref]$cursor
+    )
+
+    Set-Clipboard -Value $line -ErrorAction Stop
+    Set-PSReadLineViRegister -Text $line
+}
+
+# Cut the entire command to both the clipboard and the Vi register
+Set-PSReadLineKeyHandler -Chord 'd,d' -ViMode Command -ScriptBlock {
+    $line = ''
+    $cursor = 0
+    [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState(
+        [ref]$line, [ref]$cursor
+    )
+
+    if ($line.Length -gt 0) {
+        Set-Clipboard -Value $line -ErrorAction Stop
+        Set-PSReadLineViRegister -Text $line
+        [Microsoft.PowerShell.PSConsoleReadLine]::Delete(0, $line.Length)
+    }
+}
+
+# Sync the clipboard to the Vi register, then paste after the cursor
+Set-PSReadLineKeyHandler -Chord p -ViMode Command -ScriptBlock {
+    $text = [string](Get-Clipboard -Raw -ErrorAction Stop)
+    Set-PSReadLineViRegister -Text $text
+
+    if ($text.Length -gt 0) {
+        [Microsoft.PowerShell.PSConsoleReadLine]::PasteAfter()
+    }
+}
+
 # Activate zsh style path completion.
 
 $PSReadLineVersion = Get-Module -Name PSReadLine | Select-Object -Property Version
