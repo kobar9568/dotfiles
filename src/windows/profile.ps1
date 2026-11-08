@@ -745,6 +745,412 @@ if ($Env:SSH_CONNECTION) {
     clear
 }
 
+# ============================================================
+# Windows Terminal Path Hyperlinks
+#
+# C:\hoge\fuga のようなパスをOSC 8リンク化し、
+# Ctrl+Click時にInvoke-Itemで既定アクションを実行する。
+# ============================================================
+
+$script:TerminalPathProtocol = 'wtopen'
+$script:TerminalPathHandlerDirectory =
+    Join-Path $env:LOCALAPPDATA 'TerminalPathLink'
+
+$script:TerminalPathHandler =
+    Join-Path $script:TerminalPathHandlerDirectory 'Open-TerminalPath.ps1'
+
+
+function Install-TerminalPathHandler {
+    [CmdletBinding()]
+    param()
+
+    $protocol = 'wtopen'
+    $handlerDirectory =
+        Join-Path $env:LOCALAPPDATA 'TerminalPathLink'
+
+    $handlerPath =
+        Join-Path $handlerDirectory 'Open-TerminalPath.js'
+
+    New-Item `
+        -ItemType Directory `
+        -Path $handlerDirectory `
+        -Force |
+        Out-Null
+
+    # GUI版Windows Script Hostで実行されるため、
+    # コンソールやWindows Terminalは生成されない。
+    @'
+(function () {
+    try {
+        if (WScript.Arguments.length < 1) {
+            WScript.Quit(1);
+        }
+
+        var uri = String(WScript.Arguments.Item(0));
+
+        // wtopen://open/<Base64URL>
+        var match =
+            /^wtopen:\/\/open\/([A-Za-z0-9_-]+)\/?(?:[?#].*)?$/i.exec(uri);
+
+        if (!match) {
+            WScript.Quit(2);
+        }
+
+        var base64 = match[1]
+            .replace(/-/g, "+")
+            .replace(/_/g, "/");
+
+        while ((base64.length % 4) !== 0) {
+            base64 += "=";
+        }
+
+        // Base64 -> byte array
+        var xml = new ActiveXObject("Msxml2.DOMDocument.6.0");
+        var node = xml.createElement("base64");
+
+        node.dataType = "bin.base64";
+        node.text = base64;
+
+        var bytes = node.nodeTypedValue;
+
+        // UTF-8 byte array -> string
+        var stream = new ActiveXObject("ADODB.Stream");
+
+        stream.Type = 1; // Binary
+        stream.Open();
+        stream.Write(bytes);
+        stream.Position = 0;
+        stream.Type = 2; // Text
+        stream.Charset = "utf-8";
+
+        var path = stream.ReadText();
+
+        stream.Close();
+
+        // ドライブ絶対パスまたはUNCだけ許可
+        if (!/^(?:[A-Za-z]:\\|\\\\)/.test(path)) {
+            WScript.Quit(3);
+        }
+
+        var fso = new ActiveXObject("Scripting.FileSystemObject");
+
+        if (!fso.FileExists(path) && !fso.FolderExists(path)) {
+            WScript.Quit(4);
+        }
+
+        // ファイルなら関連付け済みアプリ、
+        // ディレクトリならExplorerで開く。
+        var shell = new ActiveXObject("Shell.Application");
+        shell.ShellExecute(path, "", "", "open", 1);
+
+        WScript.Quit(0);
+    }
+    catch (error) {
+        WScript.Quit(10);
+    }
+})();
+'@ | Set-Content `
+        -LiteralPath $handlerPath `
+        -Encoding ASCII
+
+    $protocolKey =
+        "HKCU:\Software\Classes\$protocol"
+
+    New-Item -Path $protocolKey -Force |
+        Out-Null
+
+    Set-Item `
+        -Path $protocolKey `
+        -Value 'URL:Windows Terminal Path Opener'
+
+    New-ItemProperty `
+        -Path $protocolKey `
+        -Name 'URL Protocol' `
+        -Value '' `
+        -PropertyType String `
+        -Force |
+        Out-Null
+
+    $commandKey =
+        Join-Path $protocolKey 'shell\open\command'
+
+    New-Item -Path $commandKey -Force |
+        Out-Null
+
+    $wscript =
+        Join-Path $env:SystemRoot 'System32\wscript.exe'
+
+    $command = (
+        '"{0}" //B //Nologo "{1}" "%1"'
+    ) -f $wscript, $handlerPath
+
+    Set-Item `
+        -Path $commandKey `
+        -Value $command
+
+    # 以前のPowerShell版ハンドラーは不要
+    Remove-Item `
+        -LiteralPath (
+            Join-Path $handlerDirectory 'Open-TerminalPath.ps1'
+        ) `
+        -Force `
+        -ErrorAction SilentlyContinue
+}
+
+
+function New-TerminalPathHyperlink {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory)]
+        [string]$Path,
+
+        [string]$Label = $Path
+    )
+
+    $esc = [char]27
+    $st  = "$esc\"
+
+    $bytes = [Text.Encoding]::UTF8.GetBytes($Path)
+    $token = [Convert]::ToBase64String($bytes)
+    $token = $token.TrimEnd('=').Replace('+', '-').Replace('/', '_')
+
+    "${esc}]8;;wtopen://open/$token${st}${Label}${esc}]8;;${st}"
+}
+
+
+function ConvertTo-TerminalPathLink {
+    [CmdletBinding()]
+    param(
+        [Parameter(ValueFromPipeline)]
+        [AllowNull()]
+        [object]$InputObject
+    )
+
+    process {
+        if (
+            -not $env:WT_SESSION -or
+            $InputObject -isnot [string]
+        ) {
+            $InputObject
+            return
+        }
+
+        $text = [string]$InputObject
+
+        if ([string]::IsNullOrWhiteSpace($text)) {
+            $text
+            return
+        }
+
+        # ----------------------------------------------------
+        # 1行全体がパスの場合
+        #
+        # C:\Program Files\Example File.txt
+        # I:\Downloads\Umeko J - Toph Beifong Set 2\foo.jpg
+        #
+        # のような空白入りパスも丸ごとリンク化する。
+        # ----------------------------------------------------
+
+        $leadingWhitespace  = [regex]::Match($text, '^\s*').Value
+        $trailingWhitespace = [regex]::Match($text, '\s*$').Value
+
+        $contentLength =
+            $text.Length -
+            $leadingWhitespace.Length -
+            $trailingWhitespace.Length
+
+        if ($contentLength -gt 0) {
+            $content = $text.Substring(
+                $leadingWhitespace.Length,
+                $contentLength
+            )
+
+            $path = $content
+            $wasQuoted = $false
+
+            if (
+                $content.Length -ge 2 -and
+                $content.StartsWith('"') -and
+                $content.EndsWith('"')
+            ) {
+                $path = $content.Substring(
+                    1,
+                    $content.Length - 2
+                )
+
+                $wasQuoted = $true
+            }
+
+            if (
+                $path -match '^(?:[A-Za-z]:\\|\\\\)' -and
+                (Test-Path -LiteralPath $path)
+            ) {
+                $link = New-TerminalPathHyperlink `
+                    -Path $path `
+                    -Label $path
+
+                if ($wasQuoted) {
+                    $link = '"' + $link + '"'
+                }
+
+                $leadingWhitespace + $link + $trailingWhitespace
+                return
+            }
+        }
+
+        # ----------------------------------------------------
+        # 文中に含まれるパス
+        #
+        # 引用符付きなら空白入りにも対応。
+        # 引用符なしは従来どおり空白で終了する。
+        # ----------------------------------------------------
+
+        $pattern = @'
+"(?<quoted>(?:[A-Za-z]:\\|\\\\)[^"\r\n]+)"|(?<plain>(?<![A-Za-z0-9_])(?:[A-Za-z]:\\|\\\\)[^\s<>:"|?*\x00-\x1F]+)
+'@.Trim()
+
+        $evaluator =
+            [System.Text.RegularExpressions.MatchEvaluator] {
+                param($match)
+
+                $isQuoted = $match.Groups['quoted'].Success
+
+                $path = if ($isQuoted) {
+                    $match.Groups['quoted'].Value
+                }
+                else {
+                    $match.Groups['plain'].Value
+                }
+
+                if (-not (Test-Path -LiteralPath $path)) {
+                    return $match.Value
+                }
+
+                $link = New-TerminalPathHyperlink `
+                    -Path $path `
+                    -Label $path
+
+                if ($isQuoted) {
+                    return '"' + $link + '"'
+                }
+
+                return $link
+            }
+
+        [regex]::Replace(
+            $text,
+            $pattern,
+            $evaluator
+        )
+    }
+}
+
+
+function global:Out-Default {
+    $input |
+        ForEach-Object {
+            if ($_ -is [string]) {
+                $_ | ConvertTo-TerminalPathLink
+            }
+            else {
+                $_
+            }
+        } |
+        Microsoft.PowerShell.Core\Out-Default
+}
+
+
+# プロトコルハンドラーが未登録なら自動インストール
+$protocolRegistryPath =
+    "HKCU:\Software\Classes\$script:TerminalPathProtocol"
+
+if (
+    -not (Test-Path $protocolRegistryPath) -or
+    -not (Test-Path $script:TerminalPathHandler)
+) {
+    Install-TerminalPathHandler
+}
+
+# Vim style Ctrl+A&Ctrl+X
+function Invoke-NumberDelta {
+    param(
+        [int]$Delta
+    )
+
+    $line   = $null
+    $cursor = 0
+    [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState(
+        [ref]$line,
+        [ref]$cursor
+    )
+
+    $matches = [regex]::Matches($line, '\d+')
+
+    $target = $matches |
+        Where-Object {
+            ($cursor -ge $_.Index -and $cursor -lt ($_.Index + $_.Length)) -or
+            ($_.Index -ge $cursor)
+        } |
+        Select-Object -First 1
+
+    if (-not $target) {
+        return
+    }
+
+    $original = $target.Value
+    $value    = [long]$original
+    $newValue = $value + $Delta
+
+    # 符号を除いた元の桁数
+    $digits = $original.TrimStart('+', '-')
+    $width  = $digits.Length
+
+    # "08", "007" など、先頭ゼロを持つ値なら桁数を尊重する
+    $zeroPadded = (
+        $digits.Length -gt 1 -and
+        $digits.StartsWith('0')
+    )
+
+    if ($zeroPadded) {
+        if ($newValue -lt 0) {
+            $text = '-' + ([math]::Abs($newValue)).ToString("D$width")
+        }
+        else {
+            $text = $newValue.ToString("D$width")
+
+            # 元が明示的な + 符号付きならそれも維持
+            if ($original.StartsWith('+')) {
+                $text = '+' + $text
+            }
+        }
+    }
+    else {
+        $text = $newValue.ToString()
+
+        if ($original.StartsWith('+') -and $newValue -ge 0) {
+            $text = '+' + $text
+        }
+    }
+
+    [Microsoft.PowerShell.PSConsoleReadLine]::Replace(
+        $target.Index,
+        $target.Length,
+        $text
+    )
+
+    [Microsoft.PowerShell.PSConsoleReadLine]::SetCursorPosition(
+        $target.Index + $text.Length - 1
+    )
+}
+
+Set-PSReadLineKeyHandler -Chord 'Ctrl+a' -ScriptBlock {
+    Invoke-NumberDelta 1
+}
+
+Set-PSReadLineKeyHandler -Chord 'Ctrl+x' -ScriptBlock {
+    Invoke-NumberDelta -1
+}
+
 # Activate Starship.
 $ENV:STARSHIP_CONFIG = "$HOME\dotfiles\src\starship\starship.toml"
 Invoke-Expression (&starship init powershell)
