@@ -660,6 +660,31 @@ Set-PSReadLineKeyHandler -Chord 'Ctrl+g' -ScriptBlock {
     }
 }
 
+# Route grep output through PowerShell to avoid console encoding issues.
+function global:grep {
+    begin {
+        $grepArguments = $args
+        $grepExecutable = (
+            Get-Command grep.exe -CommandType Application -ErrorAction Stop
+        ).Source
+
+        $grepPipeline = {
+            & $grepExecutable -a @grepArguments |
+                ForEach-Object { $_ }
+        }.GetSteppablePipeline($MyInvocation.CommandOrigin)
+
+        $grepPipeline.Begin($MyInvocation.ExpectingInput)
+    }
+
+    process {
+        $grepPipeline.Process($_)
+    }
+
+    end {
+        $grepPipeline.End()
+    }
+}
+
 # Update the internal Vi register without changing the input buffer
 function Set-PSReadLineViRegister {
     param([AllowEmptyString()][string]$Text)
