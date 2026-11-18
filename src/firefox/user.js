@@ -7,3 +7,5 @@ user_pref("browser.tabs.splitView.enabled", true); // Default: false
 user_pref("reader.parse-on-load.enabled", false); // Default: true
 user_pref("ui.key.menuAccessKeyFocuses", false); // Default: true
 user_pref("browser.nova.enabled", false); // Default: true
+user_pref("browser.tabs.fadeOutExplicitlyUnloadedTabs", false); // Default: true
+user_pref("browser.tabs.fadeOutUnloadedTabs", false); // Default: false

@@ -218,3 +218,14 @@
 #pageAction-urlbar-_testpilot-containers { /* Firefox Multi-Account Containers */
   display: none;
 }
+
+/* アンロード中のタブ表示をグレーアウトからChromiumスタイルに変更 */
+#tabbrowser-tabs .tabbrowser-tab:is([pending], [discarded]) .tab-icon-image {
+  box-sizing: border-box !important;
+  width: 16px !important;
+  height: 16px !important;
+  padding: 3px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7.25' pathLength='360' transform='rotate(100 8 8)' fill='none' stroke='%23ABABAB' stroke-opacity='0.549' stroke-width='1.5' stroke-linecap='round' stroke-dasharray='160 20 25 20 25 20 25 20 25 20'/%3E%3C/svg%3E") center / 16px 16px no-repeat border-box !important;
+}
